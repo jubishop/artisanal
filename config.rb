@@ -1,11 +1,18 @@
+require 'tzinfo'
+Time.zone = 'US/Pacific'
+
 page '/*.xml', layout: false
 page '/*.json', layout: false
-page '/*.txt', layout: false
 
 activate :blog do |blog|
-  blog.tag_template = 'tag.html'
   blog.calendar_template = 'calendar.html'
+  blog.default_extension = '.md.erb'
+  blog.tag_template = 'tag.html'
+  blog.paginate = true
 end
 
-configure :build do
-end
+config[:css_dir] = 'assets/css'
+config[:images] = 'assets/img'
+config[:js_dir] = 'assets/js'
+config[:port] = 80
+config[:trailing_slash] = false
