@@ -1,1 +1,3 @@
-# View [Blog](https://artisanalsoftware.com)
+# Middleman Blog
+
+Viewable [here](https://artisanalsoftware.com)
