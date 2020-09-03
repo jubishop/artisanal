@@ -1,4 +1,3 @@
-require 'tzinfo'
 Time.zone = 'US/Pacific'
 
 page '/*.xml', layout: false
@@ -7,6 +6,10 @@ page '/*.json', layout: false
 activate :blog do |blog|
   blog.calendar_template = 'calendar.html'
   blog.default_extension = '.md.erb'
+  blog.new_article_template = File.expand_path(
+    'source/templates/article.tt',
+    File.dirname(__FILE__))
+  blog.sources = 'articles/{title}.html'
   blog.tag_template = 'tag.html'
   blog.paginate = true
 end
