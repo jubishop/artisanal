@@ -4,4 +4,5 @@ gem 'middleman'
 gem 'middleman-blog'
 
 gem 'builder'
+gem 'nokogiri'
 gem 'redcarpet'
