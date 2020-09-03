@@ -4,20 +4,21 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 
 activate :blog do |blog|
-  blog.calendar_template = 'calendar.html'
-  blog.day_link = "date/{year}/{month}/{day}.html"
   blog.default_extension = '.md.erb'
-  blog.month_link = "date/{year}/{month}.html"
+  blog.generate_day_pages = false
+  blog.generate_month_pages = false
+  blog.generate_year_pages = false
   blog.new_article_template = File.expand_path(
-    'source/templates/article.tt',
-    File.dirname(__FILE__))
+      'templates/article.tt',
+      File.dirname(__FILE__))
   blog.sources = 'articles/{title}.html'
-  blog.permalink = 'article/{title}.html'
-  blog.taglink = "tag/{tag}.html"
-  blog.tag_template = 'tag.html'
+  blog.permalink = 'articles/{title}'
+  blog.taglink = 'tags/{tag}.html'
+  blog.tag_template = 'tags/tag.html'
   blog.paginate = true
-  blog.year_link = "date/{year}.html"
 end
+
+activate :directory_indexes
 
 config[:css_dir] = 'assets/css'
 config[:images] = 'assets/img'
