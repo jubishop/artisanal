@@ -10,6 +10,7 @@ activate :blog do |blog|
     'source/templates/article.tt',
     File.dirname(__FILE__))
   blog.sources = 'articles/{title}.html'
+  blog.permalink = '{title}.html'
   blog.tag_template = 'tag.html'
   blog.paginate = true
 end
