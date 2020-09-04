@@ -1,36 +1,41 @@
 body {
+  --body-margin: 1em;
   --sidebar-showing: none;
   --sidebar-hidden: revert;
 
   column-gap: 2em;
   display: grid;
   grid-template-columns: auto 1fr;
-  margin: 0 1em;
+  margin: var(--body-margin);
   padding: 0;
 }
 
 /* SIDEBAR */
-#show-sidebar-button {
-  cursor: pointer;
-  display: var(--sidebar-hidden);
-  font-size: 2em;
-}
-#hide-sidebar-button {
-  cursor: pointer;
-  display: var(--sidebar-showing);
-  font-size: 2em;
-}
-
 .sidebar {
+  --button-size: 2em;
+
+  display: grid;
   height: 0;
   margin: 0;
   padding: 0;
   position: sticky;
-  top: 0;
+  row-gap: 1em;
+  top: var(--body-margin);
+}
+
+#show-sidebar-button {
+  cursor: pointer;
+  display: var(--sidebar-hidden);
+  font-size: var(--button-size);
+}
+#hide-sidebar-button {
+  cursor: pointer;
+  display: var(--sidebar-showing);
+  float: right;
+  font-size: var(--button-size);
 }
 
 .upper-left {
-  align-self: center;
   height: 4em;
   text-align: center;
 }
@@ -39,8 +44,6 @@ body {
   display: var(--sidebar-showing);
   font-family: 'Parisienne', cursive;
   font-size: 4em;
-  margin: 0;
-  padding: 0;
   text-decoration: none;
 }
 
@@ -68,12 +71,15 @@ body {
 
 .sidebar-header {
   display: var(--sidebar-hidden);
-  font-size: 3em;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 4em;
+  left: 0;
+  letter-spacing: 0.2em;
   margin: 0;
   padding: 0;
   position: absolute;
   text-decoration: none;
-  top: 3em;
+  top: 9rem;
   transform: rotate(90deg);
   transform-origin: 1em 0;
 }
