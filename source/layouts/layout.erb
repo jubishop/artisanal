@@ -7,13 +7,29 @@
 
   <%= feed_tag :atom, "/feed.xml", title: "Artisanal Feed" %>
 
+  <script src="https://kit.fontawesome.com/bcb8451e88.js"
+          crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+
   <%= stylesheet_link_tag "site" %>
   <%= javascript_include_tag "site" %>
   <%= yield_content :assets %>
 </head>
 
 <body>
-  <div class="sidebar"><div class="sb-content">
+  <div class="upper-left">
+    <i id="show-sidebar-button" class="fad fa-arrow-square-right"></i>
+    <%= link_to "A", "/", id: "corner-artisanal-letter",
+                          class: "artisanal-letter" %>
+  </div>
+
+  <h1 class="headline">
+    <%= link_to "A", "/", id: "headline-artisanal-letter",
+                          class: "artisanal-letter" %>
+    <%= current_page.data.headline || current_page.data.title %>
+  </h1>
+
+  <div class="sidebar">
     <%= image_tag "https://graph.facebook.com/688626964/picture?type=large",
                   class: "profile-pic",
                   alt: "My profile pic" %>
@@ -25,12 +41,11 @@
         <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
       <% end %>
     </ul>
-  </div></div>
+
+    <i id="hide-sidebar-button" class="fad fa-arrow-square-left"></i>
+  </div>
 
   <div class="main">
-    <h1 class="headline">
-      <%= current_page.data.headline || current_page.data.title %>
-    </h1>
     <%= yield %>
   </div>
 </body>
