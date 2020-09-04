@@ -6,10 +6,10 @@ body {
   --sidebar-showing: none;
   --sidebar-hidden: revert;
 
-  overflow: hidden;
   display: grid;
   grid-template-columns: auto 1fr;
   margin-left: 1em;
+  overflow: hidden;
   padding: 0;
 }
 
@@ -100,9 +100,8 @@ body {
 
 .article {
   border-left: 1px solid black;
-  padding-left: 1em;
-  padding-top: 1em;
   overflow-y: scroll;
+  padding: 1em;
 }
 .article p:first-child {
   margin-top: 0;
@@ -118,7 +117,9 @@ body {
 
 /* WIDE SCREENS */
 @media only screen and (min-width: 1200px) {
-  /* #hide-sidebar-button {
-    display: none;
-  } */
+  <% if app.production? %>
+    #hide-sidebar-button {
+      display: none;
+    }
+  <% end %>
 }
