@@ -9,10 +9,7 @@
 
   <%= stylesheet_link_tag "site" %>
   <%= javascript_include_tag "site" %>
-
-  <% if content_for?(:assets) %>
-    <%= yield_content :assets %>
-  <% end %>
+  <%= yield_content :assets %>
 </head>
 
 <body>
