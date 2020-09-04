@@ -2,7 +2,6 @@ body {
   --sidebar-showing: none;
   --sidebar-hidden: revert;
 
-  column-gap: 2em;
   display: grid;
   grid-template-columns: auto 1fr;
   margin: 0 1em;
@@ -26,6 +25,7 @@ body {
   cursor: pointer;
   display: var(--sidebar-hidden);
   font-size: var(--button-size);
+  top: 1rem;
 }
 #hide-sidebar-button {
   cursor: pointer;
@@ -37,6 +37,7 @@ body {
 .upper-left {
   height: 4em;
   text-align: center;
+  margin-right: 1em;
 }
 
 .artisanal-letter {
@@ -84,6 +85,10 @@ body {
 }
 
 /* MAIN */
+.main {
+  margin-left: 1em;
+}
+
 .headline {
   background: white;
   position: sticky;
@@ -99,9 +104,8 @@ body {
 }
 
 .article {
-  position: relative;
   border-left: 1px solid black;
-  left: -1em;
+  padding-top: 1em;
   padding-left: 1em;
 }
 
