@@ -23,7 +23,6 @@ body {
   cursor: pointer;
   display: var(--sidebar-hidden);
   font-size: var(--button-size);
-  top: 1rem;
 }
 #hide-sidebar-button {
   cursor: pointer;
@@ -34,8 +33,7 @@ body {
 
 .upper-left {
   height: 4em;
-  margin-bottom: 1em;
-  margin-right: 1em;
+  margin: 1em 0.5em;
   text-align: center;
 }
 
@@ -78,7 +76,7 @@ body {
   padding: 0;
   position: absolute;
   text-decoration: none;
-  top: 9rem;
+  top: 10rem;
   transform: rotate(90deg);
   transform-origin: 1em 0;
 }
@@ -97,7 +95,7 @@ body {
   top: 0;
 }
 .headline h1 {
-  font-size: 2.5em;
+  font-size: 3em;
   margin: 0;
   padding: 0;
 }
@@ -108,8 +106,12 @@ body {
   padding-top: 1em;
 }
 
+.article p:first-child {
+  margin-top: 0;
+}
+
 /* MEDIUM SCREENS */
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
   body {
     --sidebar-showing: revert;
     --sidebar-hidden: none;
@@ -117,7 +119,7 @@ body {
 }
 
 /* WIDE SCREENS */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   #hide-sidebar-button {
     display: none;
   }
