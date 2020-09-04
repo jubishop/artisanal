@@ -1,10 +1,8 @@
 body {
-  --sidebar-shown: none;
   column-gap: 2em;
-
   display: grid;
   grid-template-columns: auto auto;
-  margin: 0 2em;
+  margin: 0 1em;
   padding: 0;
 }
 
@@ -22,7 +20,17 @@ body {
 #hide-sidebar-button {
   cursor: pointer;
   font-size: 2em;
-  text-align: right;
+  text-align: right !important;
+}
+#sidebar-header {
+  top: 1em;
+  position: absolute;
+  font-size: 3em;
+  text-decoration: none;
+  transform-origin: 1em 0;
+  transform: rotate(90deg);
+  padding: 0;
+  margin: 0;
 }
 
 .artisanal-letter {
@@ -50,27 +58,36 @@ body {
   top: 6em;
   width: 100%;
 }
-.sidebar * {
-  display: var(--sidebar-shown);
-  text-align: center;
+#sidebar-links {
+  display: none;
 }
+#sidebar-links * {
+  display: block;
+}
+
 .profile-pic {
   margin: auto;
   width: 10em;
+}
+.home-link,
+.about-link {
+  text-align: center;
 }
 .sidebar ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 @media only screen and (min-width: 800px) {
-  body {
-    --sidebar-shown: block;
+  #sidebar-links {
+    display: block;
   }
 
   #show-sidebar-button,
-  #hide-sidebar-button {
+  #hide-sidebar-button,
+  #sidebar-header {
     display: none;
   }
 
