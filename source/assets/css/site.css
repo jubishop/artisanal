@@ -80,13 +80,13 @@ body {
   text-align: center;
 }
 
+/* MEDIUM SCREENS */
 @media only screen and (min-width: 800px) {
   #sidebar-links {
     display: block;
   }
 
   #show-sidebar-button,
-  #hide-sidebar-button,
   #sidebar-header {
     display: none;
   }
@@ -95,6 +95,13 @@ body {
     display: block;
   }
   #headline-artisanal-letter {
+    display: none;
+  }
+}
+
+/* WIDE SCREENS */
+@media only screen and (min-width: 1024px) {
+  #hide-sidebar-button {
     display: none;
   }
 }
