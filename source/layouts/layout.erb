@@ -19,18 +19,15 @@
 <body>
   <div class="upper-left">
     <i id="show-sidebar-button" class="fad fa-arrow-square-right"></i>
-    <%= link_to "A", "/", id: "corner-artisanal-letter",
-                          class: "artisanal-letter" %>
+    <%= link_to "A", "/", class: "artisanal-letter" %>
   </div>
 
   <h1 class="headline">
-    <%= link_to "A", "/", id: "headline-artisanal-letter",
-                          class: "artisanal-letter" %>
     <%= current_page.data.headline || current_page.data.title %>
   </h1>
 
   <div class="sidebar">
-    <div id="sidebar-links">
+    <div class="sidebar-links">
       <%= image_tag "https://graph.facebook.com/688626964/picture?type=large",
                     class: "profile-pic",
                     alt: "My profile pic" %>
@@ -45,7 +42,7 @@
 
       <i id="hide-sidebar-button" class="fad fa-arrow-square-left"></i>
     </div>
-    <%= link_to "Artisanal", "/", id: "sidebar-header" %>
+    <%= link_to "Artisanal", "/", class: "sidebar-header" %>
   </div>
 
   <div class="main" role="main">

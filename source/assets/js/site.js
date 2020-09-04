@@ -1,29 +1,15 @@
-class SideBar {
-  static domLoaded() {
-    const showButton = document.getElementById('show-sidebar-button');
-    const hideButton = document.getElementById('hide-sidebar-button');
-    const sidebarLinks = document.getElementById('sidebar-links');
-    const sidebarHeader = document.getElementById('sidebar-header');
-    const cornerLetter = document.getElementById('corner-artisanal-letter');
-    const headlineLetter = document.getElementById('headline-artisanal-letter');
+// Sidebar buttons
+document.addEventListener('DOMContentLoaded', () => {
+  const showButton = document.getElementById('show-sidebar-button');
+  const hideButton = document.getElementById('hide-sidebar-button');
 
-    showButton.addEventListener('click', () => {
-      showButton.style.display = 'none';
-      hideButton.style.display = 'block';
-      sidebarLinks.style.display = 'block';
-      sidebarHeader.style.display = 'none';
-      cornerLetter.style.display = 'block';
-      headlineLetter.style.display = 'none';
-    });
+  showButton.addEventListener('click', () => {
+    document.body.style.setProperty('--sidebar-showing', 'revert');
+    document.body.style.setProperty('--sidebar-hidden', 'none');
+  });
 
-    hideButton.addEventListener('click', () => {
-      showButton.style.display = 'block';
-      hideButton.style.display = 'none';
-      sidebarLinks.style.display = 'none';
-      sidebarHeader.style.display = 'block';
-      cornerLetter.style.display = 'none';
-      headlineLetter.style.display = 'inline-block';
-    });
-  }
-}
-document.addEventListener('DOMContentLoaded', () => SideBar.domLoaded());
+  hideButton.addEventListener('click', () => {
+    document.body.style.setProperty('--sidebar-showing', 'none');
+    document.body.style.setProperty('--sidebar-hidden', 'revert');
+  });
+});
