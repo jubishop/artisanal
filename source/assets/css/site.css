@@ -1,3 +1,7 @@
+body, html {
+  height: 100%;
+}
+
 body {
   --sidebar-showing: none;
   --sidebar-hidden: revert;
@@ -83,6 +87,8 @@ body {
 
 /* MAIN */
 .main {
+  display: grid;
+  grid-template-rows: auto 1fr;
   margin-left: 1em;
 }
 
