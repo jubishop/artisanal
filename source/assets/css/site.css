@@ -68,7 +68,7 @@ body {
   display: var(--sidebar-hidden);
   font-family: 'Patrick Hand', cursive;
   font-size: 4em;
-  left: 0;
+  left: 1rem;
   letter-spacing: 0.2em;
   margin: 0;
   padding: 0;
