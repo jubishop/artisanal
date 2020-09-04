@@ -17,10 +17,9 @@
 
 <body>
   <div class="sidebar">
-    <%= tag :img,
-            class: "profile-pic",
-            src: "https://graph.facebook.com/688626964/picture?type=large",
-            alt: "My profile pic" %>
+    <%= image_tag "https://graph.facebook.com/688626964/picture?type=large",
+                  class: "profile-pic",
+                  alt: "My profile pic" %>
     <%= link_to "Artisanal Software", "/", class: "home-link" %>
     <%= link_to "About", "/about", class: "about-link" %>
 
