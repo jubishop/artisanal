@@ -23,16 +23,17 @@ body {
   top: 0;
 }
 
-#show-sidebar-button {
-  cursor: pointer;
-  display: var(--sidebar-hidden);
-  font-size: var(--button-size);
-}
+#show-sidebar-button,
 #hide-sidebar-button {
   cursor: pointer;
+  font-size: var(--button-size);
+}
+#show-sidebar-button {
+  display: var(--sidebar-hidden);
+}
+#hide-sidebar-button {
   display: var(--sidebar-showing);
   float: right;
-  font-size: var(--button-size);
 }
 
 .upper-left {
