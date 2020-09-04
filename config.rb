@@ -8,6 +8,7 @@ activate :blog do |blog|
   blog.generate_day_pages = false
   blog.generate_month_pages = false
   blog.generate_year_pages = false
+  blog.layout = 'article'
   blog.new_article_template = File.expand_path(
       'templates/article.tt',
       File.dirname(__FILE__))

@@ -1,4 +1,37 @@
 body {
-  background: black;
-  color: white;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar {
+  width: 200px;
+  height: 100%;
+  padding: 0;
+}
+.sb-content {
+  padding-top: 10px;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar * {
+  display: block;
+}
+
+.profile-pic {
+  width: 100%;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.headline {
+  background: white;
+  position: sticky;
+  top: 0;
 }
