@@ -12,12 +12,10 @@ body {
 .sidebar {
   --button-size: 2em;
 
-  display: grid;
   height: 0;
   margin: 0;
   padding: 0;
   position: sticky;
-  row-gap: 1em;
   top: 0;
 }
 
@@ -36,8 +34,9 @@ body {
 
 .upper-left {
   height: 4em;
-  text-align: center;
+  margin-bottom: 1em;
   margin-right: 1em;
+  text-align: center;
 }
 
 .artisanal-letter {
@@ -91,11 +90,11 @@ body {
 
 .headline {
   background: white;
-  position: sticky;
-  top: 0;
   border-bottom: 1px solid black;
-  text-align: center;
   padding: 1em 0;
+  position: sticky;
+  text-align: center;
+  top: 0;
 }
 .headline h1 {
   font-size: 2.5em;
@@ -105,8 +104,8 @@ body {
 
 .article {
   border-left: 1px solid black;
-  padding-top: 1em;
   padding-left: 1em;
+  padding-top: 1em;
 }
 
 /* MEDIUM SCREENS */
