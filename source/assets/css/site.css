@@ -1,9 +1,10 @@
 body {
   --sidebar-shown: none;
+  column-gap: 2em;
 
   display: grid;
   grid-template-columns: auto auto;
-  margin: 0;
+  margin: 0 2em;
   padding: 0;
 }
 
@@ -21,7 +22,6 @@ body {
 #hide-sidebar-button {
   cursor: pointer;
   font-size: 2em;
-  margin-right: 1em;
   text-align: right;
 }
 
@@ -44,16 +44,19 @@ body {
 
 .sidebar {
   height: 0;
-  margin: 0 1em;
+  margin: 0;
+  padding: 0;
   position: sticky;
   top: 6em;
   width: 100%;
 }
 .sidebar * {
   display: var(--sidebar-shown);
+  text-align: center;
 }
 .profile-pic {
-  width: calc(100% - 2em);
+  margin: auto;
+  width: 10em;
 }
 .sidebar ul {
   list-style: none;
@@ -66,7 +69,8 @@ body {
     --sidebar-shown: block;
   }
 
-  #show-sidebar-button {
+  #show-sidebar-button,
+  #hide-sidebar-button {
     display: none;
   }
 
