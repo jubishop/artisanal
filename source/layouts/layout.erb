@@ -17,12 +17,18 @@
 </head>
 
 <body>
-  <div class="sidebar">
-    <div class="upper-left">
-      <i id="show-sidebar-button" class="fad fa-arrow-square-right"></i>
-      <%= link_to "A", "/", class: "artisanal-letter" %>
-    </div>
+  <div class="upper-left">
+    <i id="show-sidebar-button" class="fad fa-arrow-square-right"></i>
+    <%= link_to "A", "/", class: "artisanal-letter" %>
+  </div>
 
+  <div class="headline">
+    <h1>
+      <%= current_page.data.headline || current_page.data.title %>
+    </h1>
+  </div>
+
+  <div class="sidebar">
     <div class="sidebar-links">
       <%= image_tag "https://graph.facebook.com/688626964/picture?type=large",
                     class: "profile-pic",
@@ -42,12 +48,6 @@
   </div>
 
   <div class="main" role="main">
-    <div class="headline">
-      <h1>
-        <%= current_page.data.headline || current_page.data.title %>
-      </h1>
-    </div>
-
     <div class="article">
       <%= yield %>
     </div>

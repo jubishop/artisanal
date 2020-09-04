@@ -1,27 +1,24 @@
+/* CORE */
 body, html {
   height: 100%;
 }
-
 body {
-  --sidebar-showing: none;
   --sidebar-hidden: revert;
+  --sidebar-showing: none;
 
   display: grid;
   grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
   margin-left: 1em;
   overflow: hidden;
   padding: 0;
 }
 
-/* SIDEBAR */
-.sidebar {
-  --button-size: 2em;
-}
-
+/* SIDEBAR BUTTONS */
 #show-sidebar-button,
 #hide-sidebar-button {
   cursor: pointer;
-  font-size: var(--button-size);
+  font-size: 2em;
 }
 #show-sidebar-button {
   display: var(--sidebar-hidden);
@@ -31,6 +28,7 @@ body {
   float: right;
 }
 
+/* UPPER LEFT */
 .upper-left {
   height: 4em;
   margin: 1em 0.5em;
@@ -43,6 +41,20 @@ body {
   text-decoration: none;
 }
 
+/* HEADLINE */
+.headline {
+  border-bottom: 1px solid black;
+  padding: 1em 0;
+  text-align: center;
+  margin-left: 1em;
+}
+.headline h1 {
+  font-size: 3em;
+  margin: 0;
+  padding: 0;
+}
+
+/* SIDEBAR */
 .sidebar-links {
   display: var(--sidebar-showing);
 }
@@ -63,7 +75,6 @@ body {
   padding: 0;
   text-align: center;
 }
-
 .sidebar-header {
   display: var(--sidebar-hidden);
   font-family: 'Patrick Hand', cursive;
@@ -81,26 +92,12 @@ body {
 
 /* MAIN */
 .main {
-  display: grid;
-  grid-template-rows: auto 1fr;
   margin-left: 1em;
   overflow: hidden;
+  overflow-y: scroll;
 }
-
-.headline {
-  border-bottom: 1px solid black;
-  padding: 1em 0;
-  text-align: center;
-}
-.headline h1 {
-  font-size: 3em;
-  margin: 0;
-  padding: 0;
-}
-
 .article {
   border-left: 1px solid black;
-  overflow-y: scroll;
   padding: 1em;
 }
 .article p:first-child {
