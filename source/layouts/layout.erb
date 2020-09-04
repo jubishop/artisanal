@@ -42,11 +42,15 @@
   </div>
 
   <div class="main" role="main">
-    <h1 class="headline">
-      <%= current_page.data.headline || current_page.data.title %>
-    </h1>
+    <div class="headline">
+      <h1>
+        <%= current_page.data.headline || current_page.data.title %>
+      </h1>
+    </div>
 
-    <%= yield %>
+    <div class="article">
+      <%= yield %>
+    </div>
   </div>
 </body>
 

@@ -1,12 +1,11 @@
 body {
-  --body-margin: 1em;
   --sidebar-showing: none;
   --sidebar-hidden: revert;
 
   column-gap: 2em;
   display: grid;
   grid-template-columns: auto 1fr;
-  margin: var(--body-margin);
+  margin: 0 1em;
   padding: 0;
 }
 
@@ -20,7 +19,7 @@ body {
   padding: 0;
   position: sticky;
   row-gap: 1em;
-  top: var(--body-margin);
+  top: 0;
 }
 
 #show-sidebar-button {
@@ -89,6 +88,21 @@ body {
   background: white;
   position: sticky;
   top: 0;
+  border-bottom: 1px solid black;
+  text-align: center;
+  padding: 1em 0;
+}
+.headline h1 {
+  font-size: 2.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.article {
+  position: relative;
+  border-left: 1px solid black;
+  left: -1em;
+  padding-left: 1em;
 }
 
 /* MEDIUM SCREENS */
