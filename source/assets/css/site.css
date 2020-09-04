@@ -1,4 +1,4 @@
-body, html {
+html, body {
   height: 100%;
 }
 
@@ -41,7 +41,6 @@ body {
   margin: 1em 0.5em;
   text-align: center;
 }
-
 .artisanal-letter {
   display: var(--sidebar-showing);
   font-family: 'Parisienne', cursive;
@@ -55,7 +54,6 @@ body {
 .sidebar-links * {
   display: block;
 }
-
 .profile-pic {
   margin: auto;
   width: 10em;
@@ -112,7 +110,6 @@ body {
   padding-left: 1em;
   padding-top: 1em;
 }
-
 .article p:first-child {
   margin-top: 0;
 }
