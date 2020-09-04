@@ -118,7 +118,7 @@ body {
 
 /* WIDE SCREENS */
 @media only screen and (min-width: 1200px) {
-  #hide-sidebar-button {
+  /* #hide-sidebar-button {
     display: none;
-  }
+  } */
 }
