@@ -2,6 +2,8 @@
 pageable: true
 per_page: 12
 ---
+<% current_page.data.title = "Articles Tagged: #{tagname}" %>
+
 <h1>Articles tagged '<%= tagname %>'</h1>
 
 <% if paginate && num_pages > 1 %>

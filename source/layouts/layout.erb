@@ -3,33 +3,37 @@
 
 <head>
   <meta charset="utf-8" />
+  <title><%= current_page.data.title %></title>
 
-  <title>Blog Title<%= ' - ' + current_article.title unless current_article.nil? %></title>
-  <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
+  <%= feed_tag :atom, "/feed.xml", title: "Artisanal Feed" %>
+
   <%= stylesheet_link_tag "site" %>
   <%= javascript_include_tag "site" %>
+
+  <% if content_for?(:assets) %>
+    <%= yield_content :assets %>
+  <% end %>
 </head>
 
 <body>
-  <div id="main" role="main">
-    <%= yield %>
-  </div>
+  <div class="sidebar">
+    <%= tag :img,
+            class: "profile-pic",
+            src: "https://graph.facebook.com/688626964/picture?type=large",
+            alt: "My profile pic" %>
+    <%= link_to "Artisanal Software", "/", class: "home-link" %>
+    <%= link_to "About", "/about", class: "about-link" %>
 
-  <aside>
-    <h2>Recent Articles</h2>
-    <ol>
-      <% blog.articles[0...10].each do |article| %>
-        <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-      <% end %>
-    </ol>
-
-    <h2>Tags</h2>
-    <ol>
+    <ul class="tags">
       <% blog.tags.each do |tag, articles| %>
         <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
       <% end %>
-    </ol>
-  </aside>
+    </ul>
+  </div>
+
+  <div class="main">
+    <%= yield %>
+  </div>
 </body>
 
 </html>
