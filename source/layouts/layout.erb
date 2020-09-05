@@ -29,6 +29,8 @@
     <h1><%= current_page.data.title %></h1>
   </header>
 
+  <div class="upper-right"></div>
+
   <div class="sidebar">
     <nav class="sidebar-links">
       <%= image_tag "https://graph.facebook.com/688626964/picture?type=large",
@@ -37,7 +39,7 @@
       <%= link_to "Artisanal", "/", class: "home-link" %>
       <%= link_to "About", "/about", class: "about-link" %>
 
-      <ul class="tags">
+      <ul class="left-tags">
         <% blog.tags.each do |tag, articles| %>
           <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
         <% end %>
@@ -51,10 +53,17 @@
   </div>
 
   <div id="main" role="main">
-    <div class="content">
-      <%= yield %>
-    </div>
+    <%= yield %>
   </div>
+
+  <div class="rightbar">
+    <ul class="right-tags">
+      <% blog.tags.each do |tag, articles| %>
+        <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
+      <% end %>
+    </ul>
+  </div>
+
 </body>
 
 </html>

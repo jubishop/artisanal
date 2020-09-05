@@ -36,7 +36,7 @@ body {
   color: var(--main-text-color);
   display: grid;
   font-family: 'Roboto', sans-serif;
-  grid-template: auto 1fr / auto 1fr;
+  grid-template: auto 1fr / auto 1fr auto;
   height: 100%;
   margin-left: 1em;
   overflow: hidden;
@@ -81,6 +81,7 @@ body {
 #headline {
   border-bottom: 1px solid var(--main-border-color);
   cursor: pointer;
+  grid-column: 2 / span 2;
   margin-left: 1em;
   padding: 0.5rem 0 1.5rem 0;
   text-align: center;
@@ -90,6 +91,11 @@ body {
   font-size: 4em;
   margin: 0;
   padding: 0;
+}
+
+/* UPPER RIGHT */
+.upper-right {
+  display: none;
 }
 
 /* SIDEBAR EXPANDED */
@@ -138,11 +144,12 @@ body {
   background: var(--content-bg-color);
   border-left: 1px solid var(--main-border-color);
   font-size: calc(var(--main-font-multiplier) * 1.5em);
+  grid-column: 2 / span 2;
   line-height: 1.5em;
   margin-left: 1rem;
   overflow: hidden;
   overflow-y: scroll;
-  padding: 1em 2rem;
+  padding: 1em 2.5rem 1em 2rem;
   scroll-behavior: smooth;
 }
 #main *:first-child:first-letter {
@@ -166,9 +173,20 @@ body {
 
 /* WIDE SCREENS */
 @media only screen and (min-width: 1200px) {
-  <% if app.production? %>
-    #hide-sidebar-button {
-      display: none;
-    }
-  <% end %>
+  #hide-sidebar-button {
+    display: none;
+  }
+
+  .left-tags {
+    display: none;
+  }
+
+  #headline, #main {
+    grid-column: 2 / span 1;
+  }
+
+  .upper-right,
+  .rightbar {
+    display: block;
+  }
 }
