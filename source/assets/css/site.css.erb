@@ -39,23 +39,24 @@ body {
 
 /* UPPER LEFT */
 .upper-left {
-  text-align: center;
-  min-width: 2.5em;
   align-self: center;
+  min-width: 2.5em;
+  text-align: center;
 }
 .artisanal-letter {
   display: var(--sidebar-showing);
   font-family: 'Parisienne', cursive;
   font-size: 4em;
+  line-height: 1em;
   text-decoration: none;
 }
 
 /* HEADLINE */
 .headline {
   border-bottom: 1px solid black;
+  margin-left: 1em;
   padding: 0.5em 0;
   text-align: center;
-  margin-left: 1em;
 }
 .headline h1 {
   font-size: 3em;
@@ -101,10 +102,10 @@ body {
 
 /* MAIN */
 .main {
+  border-left: 1px solid black;
   margin-left: 1em;
   overflow: hidden;
   overflow-y: scroll;
-  border-left: 1px solid black;
   padding: 1em;
 }
 .main p:first-child {
