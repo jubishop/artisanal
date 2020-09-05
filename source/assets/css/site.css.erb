@@ -86,7 +86,7 @@ body {
   padding: 0;
 }
 
-/* SIDEBAR */
+/* SIDEBAR EXPANDED */
 .sidebar-links {
   display: var(--sidebar-showing);
 }
@@ -107,17 +107,22 @@ body {
   padding: 0;
   text-align: center;
 }
+
+/* SIDEBAR COLLAPSED */
 .sidebar-header {
+  position: relative;
+}
+.sidebar-header a {
   display: var(--sidebar-hidden);
   font-family: 'Patrick Hand', cursive;
   font-size: 4em;
-  left: 1rem;
+  left: 0;
   letter-spacing: 0.2em;
   margin: 0;
   padding: 0;
   position: absolute;
   text-decoration: none;
-  top: 10rem;
+  top: 5rem;
   transform: rotate(90deg);
   transform-origin: 1em 0;
 }
