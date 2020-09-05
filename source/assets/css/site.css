@@ -69,6 +69,7 @@ body {
   align-self: center;
   justify-self: center;
   min-width: 2.5em;
+  text-align: center;
 }
 .artisanal-letter {
   display: var(--sidebar-showing);
@@ -170,8 +171,7 @@ body {
 /* RIGHTBAR */
 .rightbar {
   display: var(--rightbar-showing);
-  margin-right: 2em;
-  margin-left: 1em;
+  margin: 0 2em;
 }
 
 /* MEDIUM SCREENS */
