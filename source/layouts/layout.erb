@@ -11,7 +11,7 @@
           crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Marck+Script&text=A&display=swap"
         rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Lato&display=swap"
         rel="stylesheet">
 
   <%= stylesheet_link_tag "site" %>
@@ -29,7 +29,9 @@
     <h1><%= current_page.data.title %></h1>
   </header>
 
-  <div class="upper-right"></div>
+  <div class="upper-right">
+    <%= link_to "", "http://jubishop.com", class: "fas fa-home home-icon" %>
+  </div>
 
   <div class="sidebar">
     <nav class="sidebar-links">
@@ -38,7 +40,6 @@
                       class: "profile-pic",
                       alt: "My profile pic" %>
       <% } %>
-      <%= link_to "Artisanal", "/", class: "home-link" %>
       <%= link_to "About", "/about", class: "about-link" %>
 
       <div class="left-tags">

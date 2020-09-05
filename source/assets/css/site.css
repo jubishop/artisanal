@@ -36,7 +36,7 @@ body {
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
   display: grid;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
   grid-template: auto 1fr / auto 1fr auto;
   height: 100%;
   margin-left: 1em;
@@ -67,8 +67,8 @@ body {
 /* UPPER LEFT */
 .upper-left {
   align-self: center;
+  justify-self: center;
   min-width: 2.5em;
-  text-align: center;
 }
 .artisanal-letter {
   display: var(--sidebar-showing);
@@ -96,7 +96,9 @@ body {
 
 /* UPPER RIGHT */
 .upper-right {
+  align-self: center;
   display: var(--rightbar-showing);
+  justify-self: center;
 }
 
 /* SIDEBAR EXPANDED */
@@ -113,8 +115,8 @@ body {
 .left-tags {
   display: var(--rightbar-hidden);
 }
-.home-link,
 .about-link {
+  margin-top: 1em;
   text-align: center;
 }
 .sidebar ul {
@@ -165,6 +167,7 @@ body {
 /* RIGHTBAR */
 .rightbar {
   display: var(--rightbar-showing);
+  margin-right: 2em;
 }
 
 /* MEDIUM SCREENS */
