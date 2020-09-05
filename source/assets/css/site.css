@@ -122,7 +122,9 @@ a:visited {
   display: var(--rightbar-hidden);
 }
 .about-link {
-  margin-top: 1em;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 2em;
+  letter-spacing: 0.1em;
   text-align: center;
 }
 
