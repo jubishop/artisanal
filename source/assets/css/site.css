@@ -136,14 +136,16 @@ body {
   margin: 1.5em 0;
 }
 .tags a {
-  background-color: dimgrey;
-  border: none;
+  --border-color: transparent;
+
+  background-color: #333333;
+  border: 1px solid var(--border-color);
   border-radius: 2em;
   padding: 0.5em 1em;
   text-decoration: none;
 }
 .tags a:hover {
-  background-color: grey;
+  --border-color: pink;
 }
 .tags a:visited {
   color: var(--main-text-color);
