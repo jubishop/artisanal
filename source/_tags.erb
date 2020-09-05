@@ -1,5 +1,5 @@
 <ul class="tags">
   <% blog.tags.each { |tag, articles| %>
-    <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
+    <li><%= link_to tag, tag_path(tag) %></li>
   <% } %>
 </ul>

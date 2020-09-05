@@ -110,12 +110,12 @@ body {
 .sidebar-links {
   display: var(--sidebar-showing);
 }
-.sidebar-links * {
-  display: block;
-}
 .profile-pic {
   margin: auto;
   width: 10em;
+}
+.about-link {
+  display: block;
 }
 .left-tags {
   display: var(--rightbar-hidden);
@@ -124,11 +124,29 @@ body {
   margin-top: 1em;
   text-align: center;
 }
+
+/* TAGS LIST */
 .tags {
   list-style: none;
   margin: 0;
   padding: 0;
   text-align: center;
+}
+.tags li {
+  margin: 1.5em 0;
+}
+.tags a {
+  background-color: dimgrey;
+  border: none;
+  border-radius: 2em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+}
+.tags a:hover {
+  background-color: grey;
+}
+.tags a:visited {
+  color: var(--main-text-color);
 }
 
 /* SIDEBAR COLLAPSED */
