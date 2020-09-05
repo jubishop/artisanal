@@ -6,7 +6,13 @@ body {
   --content-bg-color: #dadada;
   --main-bg-color: #e0e0e0;
   --main-border-color: lightgrey;
+  --main-font-multiplier: 1;
   --main-text-color: #202020;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  body {
+    --main-font-multiplier: 2;
+  }
 }
 @media (prefers-color-scheme: dark) {
   body {
@@ -76,7 +82,7 @@ body {
 .headline {
   border-bottom: 1px solid var(--main-border-color);
   margin-left: 1em;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 1.5rem 0;
   text-align: center;
 }
 .headline h1 {
@@ -131,16 +137,16 @@ body {
 .main {
   background: var(--content-bg-color);
   border-left: 1px solid var(--main-border-color);
-  font-size: 1.5em;
+  font-size: calc(var(--main-font-multiplier) * 1.5em);
   line-height: 1.5em;
   margin-left: 1rem;
   overflow: hidden;
   overflow-y: scroll;
-  padding: 1em 2em;
+  padding: 1em 2rem;
 }
 .main *:first-child:first-letter {
   font-family: 'Marck Script', cursive;
-  font-size: 2em;
+  font-size: calc(var(--main-font-multiplier) * 4rem);
   text-transform: capitalize;
 }
 
