@@ -1,4 +1,7 @@
-<% wrap_layout :layout do %>
+<% wrap_layout(:layout) { %>
   <% current_page.data.title = current_article.title %>
+  <% content_for(:assets) { %>
+    <%= stylesheet_link_tag "article" %>
+  <% } %>
   <%= yield %>
-<% end %>
+<% } %>

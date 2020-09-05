@@ -9,7 +9,7 @@
 
   <script src="https://kit.fontawesome.com/bcb8451e88.js"
           crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Lato&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Fira+Sans&display=swap"
         rel="stylesheet">
 
   <%= stylesheet_link_tag "site" %>
@@ -52,7 +52,9 @@
   </div>
 
   <div id="main" role="main">
-    <%= yield %>
+    <div class="content">
+      <%= yield %>
+    </div>
   </div>
 
   <div class="rightbar">
