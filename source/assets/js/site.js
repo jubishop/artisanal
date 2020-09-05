@@ -13,3 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.setProperty('--sidebar-hidden', 'revert');
   });
 });
+
+// Headline scrolling
+document.addEventListener('DOMContentLoaded', () => {
+  const headline = document.getElementById('headline');
+  const main = document.getElementById('main');
+
+  headline.addEventListener('click', () => {
+    main.scrollTo(0, 0);
+  });
+});

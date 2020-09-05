@@ -79,13 +79,14 @@ body {
 }
 
 /* HEADLINE */
-.headline {
+#headline {
   border-bottom: 1px solid var(--main-border-color);
+  cursor: pointer;
   margin-left: 1em;
   padding: 0.5rem 0 1.5rem 0;
   text-align: center;
 }
-.headline h1 {
+#headline h1 {
   font-family: 'Patrick Hand', cursive;
   font-size: 4em;
   margin: 0;
@@ -134,7 +135,7 @@ body {
 }
 
 /* MAIN */
-.main {
+#main {
   background: var(--content-bg-color);
   border-left: 1px solid var(--main-border-color);
   font-size: calc(var(--main-font-multiplier) * 1.5em);
@@ -143,8 +144,9 @@ body {
   overflow: hidden;
   overflow-y: scroll;
   padding: 1em 2rem;
+  scroll-behavior: smooth;
 }
-.main *:first-child:first-letter {
+#main *:first-child:first-letter {
   font-family: 'Marck Script', cursive;
   font-size: calc(var(--main-font-multiplier) * 4rem);
   text-transform: capitalize;
