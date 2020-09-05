@@ -76,7 +76,6 @@ a:visited {
 }
 .artisanal-letter {
   display: var(--sidebar-showing);
-  font-family: 'Marck Script', cursive;
   font-size: 5em;
   line-height: 1em;
   text-decoration: none;
@@ -154,12 +153,17 @@ a:visited {
 
 /* SIDEBAR COLLAPSED */
 .sidebar-header {
+  display: var(--sidebar-hidden);
   position: relative;
 }
+.sidebar-header a::before {
+  content: "\f568";
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+}
 .sidebar-header a {
-  display: var(--sidebar-hidden);
   font-family: 'Patrick Hand', cursive;
-  font-size: 4em;
+  font-size: 3.9em;
   left: 0;
   letter-spacing: 0.2em;
   margin: 0;
