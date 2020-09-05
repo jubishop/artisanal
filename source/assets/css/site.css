@@ -84,7 +84,7 @@ body {
   cursor: pointer;
   grid-column: 2 / span 2;
   margin-left: 1em;
-  padding: 0.5rem 0 1.5rem 0;
+  padding: 0.5rem 0 1rem 0;
   text-align: center;
 }
 #headline h1 {
@@ -99,6 +99,9 @@ body {
   align-self: center;
   display: var(--rightbar-showing);
   justify-self: center;
+}
+.home-icon {
+  font-size: 3em;
 }
 
 /* SIDEBAR EXPANDED */
