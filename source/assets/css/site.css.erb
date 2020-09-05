@@ -15,11 +15,20 @@ body {
 }
 
 /* SIDEBAR BUTTONS */
-#show-sidebar-button,
-#hide-sidebar-button {
-  cursor: pointer;
-  font-size: 2em;
+@media (pointer: fine) {
+  #show-sidebar-button,
+  #hide-sidebar-button {
+    cursor: pointer;
+    font-size: 2em;
+  }
 }
+@media (pointer: coarse) {
+  #show-sidebar-button,
+  #hide-sidebar-button {
+    font-size: 3em;
+  }
+}
+
 #show-sidebar-button {
   display: var(--sidebar-hidden);
 }
@@ -30,8 +39,6 @@ body {
 
 /* UPPER LEFT */
 .upper-left {
-  height: 4em;
-  margin: 1em 0.5em;
   text-align: center;
 }
 .artisanal-letter {
@@ -44,7 +51,7 @@ body {
 /* HEADLINE */
 .headline {
   border-bottom: 1px solid black;
-  padding: 1em 0;
+  padding: 0.5em 0;
   text-align: center;
   margin-left: 1em;
 }
