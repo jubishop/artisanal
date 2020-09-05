@@ -1,26 +1,39 @@
 /* CORE */
-body, html {
+html {
   height: 100%;
+}
+body {
+  --main-bg-color: snow;
+  --main-border-color: lightgrey;
+  --main-text-color: #202020;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    --main-bg-color: #202020;
+    --main-border-color: dimgrey;
+    --main-text-color: snow;
+  }
 }
 body {
   --sidebar-hidden: revert;
   --sidebar-showing: none;
 
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
+  height: 100%;
   margin-left: 1em;
   overflow: hidden;
   padding: 0;
 }
 
 /* SIDEBAR BUTTONS */
-@media (pointer: fine) {
-  #show-sidebar-button,
-  #hide-sidebar-button {
-    cursor: pointer;
-    font-size: 2em;
-  }
+#show-sidebar-button,
+#hide-sidebar-button {
+  cursor: pointer;
+  font-size: 2em;
 }
 @media (pointer: coarse) {
   #show-sidebar-button,
@@ -28,7 +41,6 @@ body {
     font-size: 2.5em;
   }
 }
-
 #show-sidebar-button {
   display: var(--sidebar-hidden);
 }
@@ -53,7 +65,7 @@ body {
 
 /* HEADLINE */
 .headline {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--main-border-color);
   margin-left: 1em;
   padding: 0.5em 0;
   text-align: center;
@@ -102,7 +114,7 @@ body {
 
 /* MAIN */
 .main {
-  border-left: 1px solid black;
+  border-left: 1px solid var(--main-border-color);
   margin-left: 1em;
   overflow: hidden;
   overflow-y: scroll;
