@@ -8,6 +8,10 @@ body {
   --main-border-color: lightgrey;
   --main-font-multiplier: 1;
   --main-text-color: #202020;
+  --sidebar-hidden: revert;
+  --sidebar-showing: none;
+  --rightbar-hidden: revert;
+  --rightbar-showing: none;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 3) {
   body {
@@ -29,9 +33,6 @@ body {
   }
 }
 body {
-  --sidebar-hidden: revert;
-  --sidebar-showing: none;
-
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
   display: grid;
@@ -59,7 +60,7 @@ body {
   display: var(--sidebar-hidden);
 }
 #hide-sidebar-button {
-  display: var(--sidebar-showing);
+  display: var(--rightbar-hidden);
   float: right;
 }
 
@@ -95,7 +96,7 @@ body {
 
 /* UPPER RIGHT */
 .upper-right {
-  display: none;
+  display: var(--rightbar-showing);
 }
 
 /* SIDEBAR EXPANDED */
@@ -108,6 +109,9 @@ body {
 .profile-pic {
   margin: auto;
   width: 10em;
+}
+.left-tags {
+  display: var(--rightbar-hidden);
 }
 .home-link,
 .about-link {
@@ -160,7 +164,7 @@ body {
 
 /* RIGHTBAR */
 .rightbar {
-  display: none;
+  display: var(--rightbar-showing);
 }
 
 /* MEDIUM SCREENS */
@@ -173,20 +177,12 @@ body {
 
 /* WIDE SCREENS */
 @media only screen and (min-width: 1200px) {
-  #hide-sidebar-button {
-    display: none;
-  }
-
-  .left-tags {
-    display: none;
+  body {
+    --rightbar-showing: revert;
+    --rightbar-hidden: none;
   }
 
   #headline, #main {
     grid-column: 2 / span 1;
-  }
-
-  .upper-right,
-  .rightbar {
-    display: block;
   }
 }
