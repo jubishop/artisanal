@@ -1,10 +1,5 @@
 inherit_from: ~/.rubocop.yml
 
-Style/BlockDelimiters:
-  Exclude:
-    - config.rb
-    - "source/*.builder"
-
 Style/MethodCallWithArgsParentheses:
   Exclude:
     - config.rb

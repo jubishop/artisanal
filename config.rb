@@ -3,7 +3,7 @@ Time.zone = 'US/Pacific'
 page '/*.xml', layout: false
 page '/*.json', layout: false
 
-activate :blog do |blog|
+activate(:blog) { |blog|
   blog.default_extension = '.md.erb'
   blog.generate_day_pages = false
   blog.generate_month_pages = false
@@ -17,7 +17,7 @@ activate :blog do |blog|
   blog.taglink = 'tags/{tag}.html'
   blog.tag_template = 'tags/tag.html'
   blog.paginate = true
-end
+}
 
 activate :directory_indexes
 

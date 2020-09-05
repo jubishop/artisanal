@@ -1,5 +1,5 @@
 xml.instruct!
-xml.feed xmlns: 'http://www.w3.org/2005/Atom' do
+xml.feed(xmlns: 'http://www.w3.org/2005/Atom') {
   site_url = 'http://artisanalsoftware.com/'
   xml.title 'Artisanal Software'
   xml.id URI.join(site_url, blog.options.prefix.to_s)
@@ -10,8 +10,8 @@ xml.feed xmlns: 'http://www.w3.org/2005/Atom' do
   end
   xml.author { xml.name 'Justin Bishop' }
 
-  blog.articles[0..5].each do |article|
-    xml.entry do
+  blog.articles[0..5].each { |article|
+    xml.entry {
       xml.title article.title
       xml.link href: URI.join(site_url, article.url), rel: 'alternate'
       xml.id URI.join(site_url, article.url)
@@ -20,6 +20,6 @@ xml.feed xmlns: 'http://www.w3.org/2005/Atom' do
       xml.author { xml.name 'Justin Bishop' }
       xml.summary article.summary, type: 'html'
       xml.content article.body, type: 'html'
-    end
-  end
-end
+    }
+  }
+}
