@@ -36,8 +36,7 @@ body {
   color: var(--main-text-color);
   display: grid;
   font-family: 'Roboto', sans-serif;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto 1fr;
+  grid-template: auto 1fr / auto 1fr;
   height: 100%;
   margin-left: 1em;
   overflow: hidden;
@@ -150,6 +149,11 @@ body {
   font-family: 'Marck Script', cursive;
   font-size: calc(var(--main-font-multiplier) * 4rem);
   text-transform: capitalize;
+}
+
+/* RIGHTBAR */
+.rightbar {
+  display: none;
 }
 
 /* MEDIUM SCREENS */
