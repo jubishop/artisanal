@@ -43,11 +43,7 @@
       <%= link_to "About", "/about", class: "about-link" %>
 
       <div class="left-tags">
-        <ul class="tags">
-          <% blog.tags.each { |tag, articles| %>
-            <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
-          <% } %>
-        </ul>
+        <%= partial :tags %>
       </div>
 
       <i id="hide-sidebar-button" class="fad fa-arrow-square-left"></i>
@@ -62,13 +58,8 @@
   </div>
 
   <div class="rightbar">
-    <ul class="tags">
-      <% blog.tags.each { |tag, articles| %>
-        <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
-      <% } %>
-    </ul>
+    <%= partial :tags %>
   </div>
-
 </body>
 
 </html>

@@ -24,5 +24,6 @@ activate :directory_indexes
 config[:css_dir] = 'assets/css'
 config[:images] = 'assets/img'
 config[:js_dir] = 'assets/js'
+config[:partials_dir] = 'partials'
 config[:port] = 80
 config[:trailing_slash] = false
