@@ -28,12 +28,13 @@
   </header>
 
   <div class="upper-right">
-    <%= link_to "", "https://jubishop.com", class: "fas fa-home home-icon" %>
+    <%= link_to "", "https://codepen.io/jubishop/pen/ZEWzYMe",
+                    class: "fab fa-codepen codepen" %>
   </div>
 
   <div class="sidebar">
     <nav class="sidebar-links">
-      <% link_to("/", class: "profile-pic-link") { %>
+      <% link_to("https://jubishop.com", class: "profile-pic-link") { %>
         <%= image_tag "https://graph.facebook.com/688626964/picture?type=large",
                       class: "profile-pic",
                       alt: "My profile pic" %>

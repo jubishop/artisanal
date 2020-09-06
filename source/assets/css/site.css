@@ -122,9 +122,7 @@ a.artisanal-letter:visited {
   display: var(--rightbar-showing);
   justify-self: center;
 }
-a.home-icon,
-a.home-icon:visited {
-  color: var(--visited-link-color);
+a.codepen {
   font-size: 3em;
   text-decoration: none;
 }
@@ -142,7 +140,7 @@ a.home-icon:visited {
   font-family: 'Patrick Hand', cursive;
   font-size: calc(var(--half-font-multiplier) * 2em);
   letter-spacing: 0.1em;
-  margin: 0.5rem;
+  margin: 0.5em;
   text-align: center;
 }
 .left-tags {
