@@ -1,4 +1,7 @@
-/* CONTENT */
+.content {
+  font-size: calc(var(--font-multiplier) * 1.5em);
+  line-height: 1.5em;
+}
 .content p:first-child:first-letter {
   font-family: 'Patrick Hand', cursive;
   font-size: 3em;

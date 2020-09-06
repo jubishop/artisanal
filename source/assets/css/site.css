@@ -3,9 +3,9 @@ html {
   height: 100%;
 }
 body {
-  --bg-color: #e0e0e0;
+  --bg-color: #f0f0f0;
   --border-color: lightgrey;
-  --color-pop: darkmagenta;
+  --color-pop: darkmagenta; /* TODO: Make color-pops match */
   --content-bg-color: #dadada;
   --font-multiplier: 1;
   --half-font-multiplier: calc((1 + var(--font-multiplier)) / 2);
@@ -14,8 +14,9 @@ body {
   --rightbar-showing: none;
   --sidebar-hidden: revert;
   --sidebar-showing: none;
-  --text-color: #202020;
-  --visited-link-color: #0066cc;
+  --text-color: #101010;
+  --dim-text-color: #303030;
+  --visited-link-color: #0059b3; /* dodgerblue 35% */
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 3) {
   body {
@@ -24,12 +25,13 @@ body {
 }
 @media (prefers-color-scheme: dark) {
   body {
-    --color-pop: lightcoral;
-    --content-bg-color: #262626;
-    --bg-color: #202020;
+    --bg-color: #101010;
     --border-color: dimgrey;
-    --text-color: #e0e0e0;
-    --visited-link-color: lightskyblue;
+    --color-pop: lightcoral;
+    --content-bg-color: #161616;
+    --text-color: #f0f0f0;
+    --dim-text-color: #c0c0c0;
+    --visited-link-color: #4da6ff; /* dodgerblue 65% */
   }
 }
 body {
@@ -198,13 +200,11 @@ a.home-icon:visited {
 #main {
   background: var(--content-bg-color);
   border-left: 1px solid var(--border-color);
-  font-size: calc(var(--font-multiplier) * 1.5em);
   grid-column: 2 / span 2;
-  line-height: 1.5em;
   margin-left: var(--left-grid-gap);
   overflow: hidden;
   overflow-y: scroll;
-  padding: 0 2.5rem 1rem 2rem;
+  padding: 0 2.5rem 2.5rem 2rem;
   scroll-behavior: smooth;
 }
 

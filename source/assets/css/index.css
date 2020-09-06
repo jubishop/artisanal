@@ -1,12 +1,20 @@
-.content h2 {
+.article-title {
   font-family: 'Patrick Hand', cursive;
+  font-size: calc(var(--half-font-multiplier) * 3em);
   margin-bottom: 0;
+  line-height: 1.2em;
+  margin-top: 2rem;
 }
+
 .article-date {
+  color: var(--dim-text-color);
+  font-size: calc(var(--font-multiplier) * 1.2em);
   font-style: italic;
-  margin-top: 0;
 }
+
 .article-summary {
+  font-size: calc(var(--font-multiplier) * 1.5em);
+  line-height: 1.5em;
   margin: 0.5em 0;
 }
 a.read-more,
@@ -22,7 +30,7 @@ a.read-more:visited {
   text-decoration: none;
 }
 a.read-more:hover {
-  color: var(--visited-link-color);
   background-color: var(--bg-color);
   border: 1px solid var(--visited-link-color);
+  color: var(--visited-link-color);
 }
