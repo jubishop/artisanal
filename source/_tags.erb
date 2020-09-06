@@ -1,5 +1,7 @@
+<% tagname = defined?(tagname) ? tagname : "" %>
 <ul class="tags">
   <% blog.tags.sort.each { |tag, articles| %>
-    <li><%= link_to tag, tag_path(tag) %></li>
+    <% tag_class = (tag == tagname) ? "current" : "tag" %>
+    <li><%= link_to tag, tag_path(tag), class: tag_class %></li>
   <% } %>
 </ul>

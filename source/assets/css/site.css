@@ -169,7 +169,8 @@ a.home-icon:visited {
   padding: 0.2em 0.3em;
   text-decoration: none;
 }
-.tags a:hover {
+.tags a:hover,
+.tags a.current {
   background-color: var(--bg-color);
   border: 2px solid var(--visited-link-color);
   color: var(--visited-link-color);
