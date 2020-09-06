@@ -93,7 +93,7 @@ a.artisanal-letter:visited {
 }
 
 /* HEADLINE */
-#headline {
+#headline { /* TODO: Gradient color from --text-color to --color-pop */
   border-bottom: 1px solid var(--border-color);
   cursor: pointer;
   grid-column: 2 / span 2;
