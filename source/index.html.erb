@@ -12,13 +12,4 @@ title: Artisanal Software
   <%= article.summary(250) %>
 <% } %>
 
-<% if paginate && num_pages > 1 %>
-  <div class="pagination">
-    <% if prev_page %>
-      <%= link_to 'Prev', prev_page %>
-    <% end %>
-    <% if next_page %>
-      <%= link_to 'Next', next_page %>
-    <% end %>
-  </div>
-<% end %>
+<%= partial :pagination %>

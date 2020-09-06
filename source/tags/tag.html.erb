@@ -2,24 +2,12 @@
 pageable: true
 per_page: 12
 ---
-<% current_page.data.title = "Articles Tagged: #{tagname}" %>
-
-<% if paginate && num_pages > 1 %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
-
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
-<% end %>
+<% current_page.data.title = "#{tagname} articles" %>
 
 <ul>
-  <% page_articles.each_with_index { |article, i| %>
+  <% page_articles.each { |article| %>
     <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
   <% } %>
 </ul>
 
-<% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
-  <% end %>
-<% end %>
+<%= partial :pagination %>
