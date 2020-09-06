@@ -1,11 +1,11 @@
 .pagination {
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-content: start;
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
 }
 
 .pagination a:not(:first-child) {
   border-left: solid 2px var(--main-text-color);
-  padding-left: 1em;
   margin-left: 1em;
+  padding-left: 1em;
 }

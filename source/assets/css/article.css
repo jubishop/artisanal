@@ -1,5 +1,5 @@
 /* CONTENT */
-.content *:first-child:first-letter {
+.content p:first-child:first-letter {
   font-family: 'Patrick Hand', cursive;
   font-size: calc(var(--main-font-multiplier) * 4rem);
   text-transform: capitalize;

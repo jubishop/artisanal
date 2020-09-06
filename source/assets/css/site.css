@@ -3,6 +3,7 @@ html {
   height: 100%;
 }
 body {
+  --color-pop: darkmagenta;
   --content-bg-color: #dadada;
   --left-grid-gap: 1rem;
   --main-bg-color: #e0e0e0;
@@ -13,7 +14,7 @@ body {
   --sidebar-showing: none;
   --rightbar-hidden: revert;
   --rightbar-showing: none;
-  --visited-link-color: darkblue;
+  --visited-link-color: darkslateblue;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 3) {
   body {
@@ -22,11 +23,12 @@ body {
 }
 @media (prefers-color-scheme: dark) {
   body {
+    --color-pop: lightcoral;
     --content-bg-color: #262626;
     --main-bg-color: #202020;
     --main-border-color: dimgrey;
     --main-text-color: #e0e0e0;
-    --visited-link-color: pink;
+    --visited-link-color: lightskyblue;
   }
 }
 body {
@@ -74,7 +76,9 @@ a:visited {
   min-width: 2.5em;
   text-align: center;
 }
-.artisanal-letter {
+.artisanal-letter,
+.artisanal-letter:visited {
+  color: var(--color-pop);
   display: var(--sidebar-showing);
   font-size: 5em;
   line-height: 1em;
@@ -103,8 +107,11 @@ a:visited {
   display: var(--rightbar-showing);
   justify-self: center;
 }
-.home-icon {
+.home-icon,
+.home-icon:visited {
+  color: var(--color-pop);
   font-size: 3em;
+  text-decoration: none;
 }
 
 /* SIDEBAR EXPANDED */
@@ -138,19 +145,18 @@ a:visited {
 .tags li {
   margin: 1.5em 0;
 }
-.tags a {
+.tags a,
+.tags a:visited {
   background-color: var(--content-bg-color);
   border: 1px solid var(--main-text-color);
   border-radius: 2em;
+  color: var(--main-text-color);
   padding: 0.5em 1em;
   text-decoration: none;
 }
 .tags a:hover {
   background-color: var(--main-bg-color);
   border: 1px solid var(--visited-link-color);
-}
-.tags a:visited {
-  color: var(--main-text-color);
 }
 
 /* SIDEBAR COLLAPSED */
@@ -163,7 +169,9 @@ a:visited {
   font-family: "Font Awesome 5 Pro";
   font-weight: 900;
 }
-.sidebar-header a {
+.sidebar-header a,
+.sidebar-header a:visited {
+  color: var(--color-pop);
   font-family: 'Patrick Hand', cursive;
   font-size: 3.6em;
   left: 0;

@@ -12,8 +12,9 @@ activate(:blog) { |blog|
   blog.new_article_template = File.expand_path(
       'templates/article.tt',
       File.dirname(__FILE__))
-  blog.sources = 'articles/{title}.html'
   blog.permalink = 'articles/{title}'
+  blog.sources = 'articles/{title}.html'
+  blog.summary_separator = /READMORE/
   blog.taglink = 'tags/{tag}.html'
   blog.tag_template = 'tags/tag.html'
   blog.paginate = true
