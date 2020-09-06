@@ -4,7 +4,7 @@
   justify-content: start;
 }
 
-.pagination a:nth-child(2) {
+.pagination a:not(:first-child) {
   border-left: solid 2px var(--main-text-color);
   padding-left: 1em;
   margin-left: 1em;
