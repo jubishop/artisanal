@@ -14,7 +14,7 @@ body {
   --sidebar-showing: none;
   --rightbar-hidden: revert;
   --rightbar-showing: none;
-  --visited-link-color: darkslateblue;
+  --visited-link-color: #0066cc;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 3) {
   body {
@@ -78,7 +78,10 @@ a:visited {
 }
 .artisanal-letter,
 .artisanal-letter:visited {
-  color: var(--color-pop);
+  --fa-primary-color: var(--color-pop);
+  --fa-secondary-color: var(--visited-link-color);
+  --fa-secondary-opacity: 1;
+
   display: var(--sidebar-showing);
   font-size: 5em;
   line-height: 1em;
@@ -148,7 +151,7 @@ a:visited {
 .tags a,
 .tags a:visited {
   background-color: var(--content-bg-color);
-  border: 1px solid var(--main-text-color);
+  border: 2px solid var(--main-text-color);
   border-radius: 2em;
   color: var(--main-text-color);
   padding: 0.5em 1em;
@@ -156,7 +159,7 @@ a:visited {
 }
 .tags a:hover {
   background-color: var(--main-bg-color);
-  border: 1px solid var(--visited-link-color);
+  border: 2px solid var(--visited-link-color);
 }
 
 /* SIDEBAR COLLAPSED */
