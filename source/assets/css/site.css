@@ -142,7 +142,7 @@ a.home-icon:visited {
   font-family: 'Patrick Hand', cursive;
   font-size: calc(var(--half-font-multiplier) * 2em);
   letter-spacing: 0.1em;
-  margin-top: 0.5rem;
+  margin: 0.5rem;
   text-align: center;
 }
 .left-tags {

@@ -1,6 +1,6 @@
 .articles {
   display: grid;
-  margin-top: 2rem;
+  margin: 2rem 0;
   row-gap: 3em;
 }
 
@@ -8,7 +8,7 @@
   font-family: 'Patrick Hand', cursive;
   font-size: calc(var(--half-font-multiplier) * 3rem);
   line-height: 0.9em;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .article-date {
