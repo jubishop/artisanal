@@ -1,6 +1,6 @@
 .pagination {
   display: flex;
-  font-size: calc(var(--font-multiplier) * 2em);
+  font-size: calc(var(--font-multiplier) * 2rem);
   justify-content: center;
   margin-top: 1em;
 }

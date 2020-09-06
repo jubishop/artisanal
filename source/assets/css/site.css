@@ -205,7 +205,9 @@ a.home-icon:visited {
 #main {
   background: var(--content-bg-color);
   border-left: 1px solid var(--border-color);
+  font-size: calc(var(--font-multiplier) * 1.5em);
   grid-column: 2 / span 2;
+  line-height: 1.5em;
   margin-left: var(--left-grid-gap);
   overflow: hidden;
   overflow-y: scroll;

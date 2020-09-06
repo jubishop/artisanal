@@ -1,20 +1,18 @@
 .article-title {
   font-family: 'Patrick Hand', cursive;
-  font-size: calc(var(--half-font-multiplier) * 3em);
+  font-size: calc(var(--half-font-multiplier) * 3rem);
   margin-bottom: 0;
-  line-height: 1.2em;
+  line-height: 0.9em;
   margin-top: 2rem;
 }
 
 .article-date {
   color: var(--dim-text-color);
-  font-size: calc(var(--font-multiplier) * 1.2em);
+  font-size: calc(var(--font-multiplier) * 1.2rem);
   font-style: italic;
 }
 
 .article-summary {
-  font-size: calc(var(--font-multiplier) * 1.5em);
-  line-height: 1.5em;
   margin: 0.5em 0;
 }
 a.read-more,

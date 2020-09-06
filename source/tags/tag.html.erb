@@ -3,6 +3,9 @@ pageable: true
 per_page: 12
 ---
 <% current_page.data.title = "#{tagname} articles" %>
+<% content_for(:assets) { %>
+  <%= stylesheet_link_tag "tag" %>
+<% } %>
 
 <ul>
   <% page_articles.each { |article| %>
