@@ -122,8 +122,8 @@ a.artisanal-letter:visited {
   display: var(--rightbar-showing);
   justify-self: center;
 }
-a.codepen {
-  font-size: 3em;
+a.github {
+  font-size: 4em;
   text-decoration: none;
 }
 
