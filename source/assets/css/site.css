@@ -5,7 +5,7 @@ html {
 body {
   --bg-color: #f0f0f0;
   --border-color: lightgrey;
-  --color-pop: darkmagenta; /* TODO: Make color-pops match */
+  --color-pop: #b300b3; /* fuchsia 35% */
   --content-bg-color: #dadada;
   --font-multiplier: 1;
   --half-font-multiplier: calc((1 + var(--font-multiplier)) / 2);
@@ -27,7 +27,7 @@ body {
   body {
     --bg-color: #101010;
     --border-color: dimgrey;
-    --color-pop: lightcoral;
+    --color-pop: #ff4dff; /* fuchsia 65% */
     --content-bg-color: #161616;
     --text-color: #f0f0f0;
     --dim-text-color: #c0c0c0;
@@ -96,7 +96,7 @@ a.artisanal-letter:visited {
 }
 
 /* HEADLINE */
-#headline { /* TODO: Gradient color from --text-color to --color-pop */
+#headline {
   border-bottom: 1px solid var(--border-color);
   cursor: pointer;
   grid-column: 2 / span 2;
@@ -105,10 +105,14 @@ a.artisanal-letter:visited {
   text-align: center;
 }
 #headline h1 {
+  background: -webkit-linear-gradient(var(--color-pop), var(--text-color));
+  background-clip: text;
+  -webkit-background-clip: text;
   font-family: 'Patrick Hand', cursive;
   font-size: 4em;
   margin: 0;
   padding: 0;
+  -webkit-text-fill-color: transparent;
 }
 
 /* UPPER RIGHT */
