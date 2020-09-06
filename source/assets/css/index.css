@@ -9,20 +9,20 @@
 .article-summary {
   margin: 0.5em 0;
 }
-.read-more {
-  border: 1px solid var(--main-text-color);
+a.read-more,
+a.read-more:visited {
+  border: 1px solid var(--text-color);
   border-radius: 1em;
   bottom: 1px;
+  color: var(--text-color);
   font-size: 0.8em;
   font-style: italic;
   padding: 0 0.24em;
   position: relative;
   text-decoration: none;
 }
-.read-more:visited {
-  color: var(--main-text-color);
-}
-.read-more:hover {
-  background-color: var(--main-bg-color);
+a.read-more:hover {
+  color: var(--visited-link-color);
+  background-color: var(--bg-color);
   border: 1px solid var(--visited-link-color);
 }
