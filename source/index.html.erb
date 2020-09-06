@@ -4,6 +4,7 @@ per_page: 2
 title: Artisanal Software
 ---
 <% content_for(:assets) { %>
+  <%= feed_tag :atom, "/feed.xml", title: "Artisanal Software" %>
   <%= stylesheet_link_tag "index" %>
 <% } %>
 
