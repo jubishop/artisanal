@@ -1,0 +1,22 @@
+<% content_for(:assets) { %>
+  <%= stylesheet_link_tag "articles" %>
+<% } %>
+
+<div class="articles">
+  <% page_articles.each { |article| %>
+    <div class="article">
+      <div class="article-title">
+        <%= link_to article.title, article %>
+      </div>
+      <span class="article-date">
+        <%= article.date.strftime("%e %b, '%C") %>
+      </span>
+      <p class="article-summary">
+        <%= "#{strip_tags(article.summary).strip}.." %>
+        <%= link_to "continue...", article, class: "read-more" %>
+      </p>
+    </div>
+  <% } %>
+</div>
+
+<%= partial :pagination %>

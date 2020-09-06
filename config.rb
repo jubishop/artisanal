@@ -16,7 +16,7 @@ activate(:blog) { |blog|
   blog.sources = 'articles/{title}.html'
   blog.summary_separator = /READMORE/
   blog.taglink = 'tags/{tag}.html'
-  blog.tag_template = 'tags/tag.html'
+  blog.tag_template = 'tag.html'
   blog.paginate = true
 }
 
