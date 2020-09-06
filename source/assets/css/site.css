@@ -206,7 +206,7 @@ a:visited {
 }
 
 /* WIDE SCREENS */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1280px) {
   body {
     --rightbar-showing: revert;
     --rightbar-hidden: none;
