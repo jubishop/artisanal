@@ -17,3 +17,12 @@
   margin-top: 2em;
   padding-top: 0.5em;
 }
+
+/* SYNTAX HIGHLIGHTING */
+<%= Rouge::Themes::Github.render(:scope => '.highlight') %>
+@media (prefers-color-scheme: dark) {
+  <%= Rouge::Themes::MonokaiSublime.render(:scope => '.highlight') %>
+}
+.highlight {
+  padding: 0 0.2em !important;
+}

@@ -71,6 +71,9 @@ GEM
       servolux
       tilt (~> 2.0.9)
       uglifier (~> 3.0)
+    middleman-syntax (3.2.0)
+      middleman-core (>= 3.2)
+      rouge (~> 3.2)
     mini_portile2 (2.4.0)
     minitest (5.14.2)
     nokogiri (1.10.10)
@@ -89,6 +92,7 @@ GEM
       ffi (~> 1.0)
     redcarpet (3.5.0)
     rexml (3.2.4)
+    rouge (3.22.0)
     sassc (2.4.0)
       ffi (~> 1.9)
     servolux (0.13.0)
@@ -108,6 +112,7 @@ DEPENDENCIES
   builder
   middleman
   middleman-blog
+  middleman-syntax
   nokogiri
   redcarpet
 

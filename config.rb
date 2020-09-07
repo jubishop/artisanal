@@ -21,12 +21,15 @@ activate(:blog) { |blog|
 }
 
 activate :directory_indexes
+activate :syntax
 
 config[:css_dir] = 'assets/css'
 config[:images] = 'assets/img'
 config[:images_dir] = 'assets/img'
 config[:js_dir] = 'assets/js'
 config[:host] = 'https://artisanalsoftware.com'
+config[:markdown] = {fenced_code_blocks: true, smartypants: true}
+config[:markdown_engine] = :redcarpet
 config[:partials_dir] = 'partials'
 config[:port] = 80
 config[:trailing_slash] = false
