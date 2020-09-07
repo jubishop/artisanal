@@ -23,22 +23,21 @@
 @media (prefers-color-scheme: dark) {
   <%= Rouge::Themes::MonokaiSublime.render(:scope => '.highlight') %>
 }
-pre.highlight {
-  border-radius: 5px;
-  margin: 0;
-  padding: 0.4em 0.6em !important;
+code {
+  font-family: 'Fira Code', monospace;
 }
-pre.ruby {
+pre.highlight {
+  margin: 0;
+  padding: 0.4em 0.6em;
   position: relative;
 }
-pre.ruby::before {
+pre.highlight::before {
   color: var(--dim-text-color);
-  content: "Ruby";
   font-size: 0.8em;
   position: absolute;
   right: 0.3em;
   top: -0.2em;
 }
-code {
-  font-family: 'Fira Code', monospace;
+pre.ruby::before {
+  content: "Ruby";
 }
