@@ -132,7 +132,6 @@ a.github {
   display: var(--sidebar-showing);
 }
 .profile-pic {
-  margin: auto;
   width: 10em;
 }
 .about-link {
