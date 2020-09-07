@@ -3,3 +3,13 @@
   font-size: 3em;
   text-transform: capitalize;
 }
+
+.comment {
+  border-top: 1px solid var(--border-color);
+  color: var(--dim-text-color);
+  font-size: 0.9em;
+  font-style: italic;
+  line-height: 1.2em;
+  margin-top: 2em;
+  padding-top: 0.5em;
+}
