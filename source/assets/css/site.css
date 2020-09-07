@@ -28,7 +28,9 @@ body {
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-  body { --font-multiplier: 2; }
+  body {
+    --font-multiplier: 2;
+  }
 }
 
 /* CORE */
