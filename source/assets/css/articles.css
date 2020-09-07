@@ -5,7 +5,7 @@
 }
 
 .article-title {
-  font-family: 'Patrick Hand', cursive;
+  font-family: var(--cursive-font), cursive;
   font-size: calc(var(--half-font-multiplier) * 3rem);
   line-height: 0.9em;
   margin: 0;

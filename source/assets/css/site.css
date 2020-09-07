@@ -1,5 +1,6 @@
 /* VARIABLES */
 body {
+  --cursive-font: 'Patrick Hand';
   --font-multiplier: 1;
   --half-font-multiplier: calc((1 + var(--font-multiplier)) / 2);
   --left-grid-gap: 1rem;
@@ -108,7 +109,7 @@ a.artisanal-letter:visited {
   background: -webkit-linear-gradient(var(--color-pop), var(--text-color));
   background-clip: text;
   -webkit-background-clip: text;
-  font-family: 'Patrick Hand', cursive;
+  font-family: var(--cursive-font), cursive;
   font-size: 4em;
   margin: 0;
   padding: 0;
@@ -136,7 +137,7 @@ a.github {
 }
 .about-link {
   display: block;
-  font-family: 'Patrick Hand', cursive;
+  font-family: var(--cursive-font), cursive;
   font-size: calc(var(--half-font-multiplier) * 2em);
   letter-spacing: 0.1em;
   margin: 0.5em;
@@ -185,7 +186,7 @@ a.github {
 .sidebar-header a,
 .sidebar-header a:visited {
   color: var(--color-pop);
-  font-family: 'Patrick Hand', cursive;
+  font-family: var(--cursive-font), cursive;
   font-size: 3.6em;
   left: 0;
   letter-spacing: 0.24em;
