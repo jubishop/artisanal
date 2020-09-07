@@ -1,7 +1,24 @@
 <% wrap_layout(:layout) { %>
   <% current_page.data.title = current_article.title %>
+
   <% content_for(:assets) { %>
     <%= stylesheet_link_tag "article" %>
   <% } %>
+
   <%= yield %>
+
+  <!-- Disqus Crap -->
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = '<%= "#{config.host}#{current_page.url}" %>';
+      this.page.identifier = '<%= current_article.title %>';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://artisanal-software.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
 <% } %>
