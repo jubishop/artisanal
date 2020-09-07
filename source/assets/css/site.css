@@ -13,8 +13,8 @@ body {
   --color-pop: #b300b3; /* fuchsia 35% */
   --content-bg-color: #e6e6e6; /* white 90% */
   --dim-text-color: #262626; /* white 15% */
+  --link-color: #0059b3; /* dodgerblue 35% */
   --text-color: #0d0d0d; /* white 5% */
-  --visited-link-color: #0059b3; /* dodgerblue 35% */
 }
 @media (prefers-color-scheme: dark) {
   body {
@@ -23,8 +23,8 @@ body {
     --color-pop: #ff4dff; /* fuchsia 65% */
     --content-bg-color: #1a1a1a; /* white 10% */
     --dim-text-color: #d9d9d9; /* white 85% */
+    --link-color: #4da6ff; /* dodgerblue 65% */
     --text-color: #f2f2f2; /* white 95% */
-    --visited-link-color: #4da6ff; /* dodgerblue 65% */
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 3) {
@@ -46,15 +46,12 @@ body {
   overflow: hidden;
   padding: 0;
 }
-a {
-  color: var(--text-color);
+a, a:visited {
+  color: var(--link-color);
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
-}
-a:visited {
-  color: var(--visited-link-color);
 }
 
 /* SIDEBAR BUTTONS */
@@ -87,7 +84,7 @@ a:visited {
 a.artisanal-letter,
 a.artisanal-letter:visited {
   --fa-primary-color: var(--color-pop);
-  --fa-secondary-color: var(--visited-link-color);
+  --fa-secondary-color: var(--link-color);
   --fa-secondary-opacity: 1;
 
   display: var(--sidebar-showing);
@@ -170,8 +167,8 @@ a.github {
 .tags a:hover,
 .tags a.current {
   background-color: var(--bg-color);
-  border: 2px solid var(--visited-link-color);
-  color: var(--visited-link-color);
+  border: 2px solid var(--link-color);
+  color: var(--link-color);
 }
 
 /* SIDEBAR COLLAPSED */
