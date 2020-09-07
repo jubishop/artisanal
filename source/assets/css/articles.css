@@ -22,7 +22,7 @@
 }
 a.read-more,
 a.read-more:visited {
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--link-color);
   border-radius: 1em;
   bottom: 1px;
   color: var(--text-color);
@@ -34,6 +34,5 @@ a.read-more:visited {
 }
 a.read-more:hover {
   background-color: var(--bg-color);
-  border: 1px solid var(--link-color);
   color: var(--link-color);
 }
