@@ -24,6 +24,7 @@ activate :directory_indexes
 
 config[:css_dir] = 'assets/css'
 config[:images] = 'assets/img'
+config[:images_dir] = 'assets/img'
 config[:js_dir] = 'assets/js'
 config[:host] = 'https://artisanalsoftware.com'
 config[:partials_dir] = 'partials'
