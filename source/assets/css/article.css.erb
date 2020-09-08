@@ -30,12 +30,24 @@ p {
 
 /* SYNTAX HIGHLIGHTING */
 <%= Rouge::Themes::Github.render(:scope => '.highlight') %>
+.codespan {
+  background-color: #f8f8f8;
+  font-weight: bold;
+  padding: 0 0.2em;
+  color: #990000;
+}
 @media (prefers-color-scheme: dark) {
   <%= Rouge::Themes::MonokaiSublime.render(:scope => '.highlight') %>
+  .codespan {
+    background-color: #272822;
+    color: #a6e22e;
+  }
 }
 code {
   font-family: 'Fira Code', monospace;
 }
+
+/* CODE BLOCKS */
 .highlight {
   margin: 0;
   padding: 0.4em 0.6em;

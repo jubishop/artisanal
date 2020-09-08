@@ -24,7 +24,7 @@ activate(:blog) { |blog|
 
 activate :directory_indexes
 activate(:syntax) { |syntax|
-  syntax.css_class = ""
+  syntax.css_class = ''
 }
 
 config[:css_dir] = 'assets/css'
@@ -33,9 +33,17 @@ config[:images_dir] = 'assets/img'
 config[:js_dir] = 'assets/js'
 config[:host] = 'https://artisanalsoftware.com'
 config[:markdown] = {
+  autolink: true,
   fenced_code_blocks: true,
+  footnotes: true,
+  highlight: true,
+  quote: true,
   renderer: ArtisanalMarkdown,
-  smartypants: true
+  smartypants: true,
+  space_after_headers: true,
+  strikethrough: true,
+  superscript: true,
+  underline: true
 }
 config[:markdown_engine] = :redcarpet
 config[:partials_dir] = 'partials'

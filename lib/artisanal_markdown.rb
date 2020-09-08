@@ -9,4 +9,8 @@ class ArtisanalMarkdown < Middleman::Renderers::MiddlemanRedcarpetHTML
       result
     end
   end
+
+  def codespan(code)
+    '<span class="codespan"><code>' + code + '</code></span>'
+  end
 end
