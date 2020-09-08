@@ -16,7 +16,7 @@ activate(:blog) { |blog|
       File.dirname(__FILE__))
   blog.permalink = 'articles/{title}'
   blog.sources = 'articles/{title}.html'
-  blog.summary_separator = /READMORE/
+  blog.summary_separator = /\n+/
   blog.taglink = 'tags/{tag}.html'
   blog.tag_template = 'tag.html'
   blog.paginate = true
