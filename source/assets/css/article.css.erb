@@ -6,7 +6,7 @@
   font-size: 3em;
   text-transform: capitalize;
 }
-.content *:first-child {
+.content > :first-child {
   margin-top: 2rem;
 }
 
@@ -36,19 +36,34 @@ p {
 code {
   font-family: 'Fira Code', monospace;
 }
-pre.highlight {
+.highlight {
   margin: 0;
   padding: 0.4em 0.6em;
   position: relative;
 }
-pre.highlight::before {
+.highlight pre {
+  margin: 0;
+}
+.highlight pre::before {
   color: var(--dim-text-color);
+  content: attr(class);
   font-family: var(--cursive-font), cursive;
   font-size: 0.8em;
   position: absolute;
   right: 0.3em;
+  text-transform: capitalize;
   top: -0.2em;
 }
-pre.ruby::before {
-  content: "Ruby";
+.clipboard {
+  bottom: 0.2em;
+  color: var(--dim-text-color);
+  cursor: copy;
+  position: absolute;
+  right: 0.2em;
+}
+.clipboard:hover {
+  color: var(--text-color);
+}
+.clipboard:active:hover {
+  color: var(--link-color);
 }

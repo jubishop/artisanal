@@ -1,3 +1,5 @@
+require 'lib/artisanal_markdown'
+
 Time.zone = 'US/Pacific'
 
 page '/*.xml', layout: false
@@ -21,14 +23,20 @@ activate(:blog) { |blog|
 }
 
 activate :directory_indexes
-activate :syntax
+activate(:syntax) { |syntax|
+  syntax.css_class = ""
+}
 
 config[:css_dir] = 'assets/css'
 config[:images] = 'assets/img'
 config[:images_dir] = 'assets/img'
 config[:js_dir] = 'assets/js'
 config[:host] = 'https://artisanalsoftware.com'
-config[:markdown] = {fenced_code_blocks: true, smartypants: true}
+config[:markdown] = {
+  fenced_code_blocks: true,
+  renderer: ArtisanalMarkdown,
+  smartypants: true
+}
 config[:markdown_engine] = :redcarpet
 config[:partials_dir] = 'partials'
 config[:port] = 80
