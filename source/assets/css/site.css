@@ -207,6 +207,7 @@ a.github {
   line-height: 1.5em;
   margin-left: var(--left-grid-gap);
   overflow: hidden;
+  overflow-wrap: break-word;
   overflow-y: scroll;
   padding: 0 2.5rem 2.5rem 2rem;
   scroll-behavior: smooth;

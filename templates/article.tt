@@ -3,5 +3,3 @@ title: <%= @title %>
 date: <%= @date.strftime('%F %R %Z') %>
 tags: <%= @tags.join(",") %>
 ---
-
-READMORE
