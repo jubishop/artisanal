@@ -46,6 +46,5 @@ config[:markdown] = {
   underline: true
 }
 config[:markdown_engine] = :redcarpet
-config[:partials_dir] = 'partials'
 config[:port] = 80
 config[:trailing_slash] = false
