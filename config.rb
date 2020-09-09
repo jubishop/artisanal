@@ -3,7 +3,6 @@ require 'lib/artisanal_markdown'
 Time.zone = 'US/Pacific'
 
 page '/*.xml', layout: false
-page '/*.json', layout: false
 
 activate(:blog) { |blog|
   blog.default_extension = '.md.erb'
@@ -23,6 +22,7 @@ activate(:blog) { |blog|
 }
 
 activate :directory_indexes
+
 activate(:syntax) { |syntax|
   syntax.css_class = ''
 }
