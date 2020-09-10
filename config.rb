@@ -3,15 +3,14 @@ Time.zone = 'US/Pacific'
 require 'slim'
 require 'slim/include'
 Slim::Engine.set_options(
-  tabsize: 2,
-  include_dirs: ["./source/partials"],
-  pretty: true,
-  shortcut: {
-    '#' => {attr: 'id'},
-    '.' => {attr: 'class'},
-    '@' => {attr: 'role'}
-  }
-)
+    tabsize: 2,
+    include_dirs: ['./source/partials'],
+    pretty: true,
+    shortcut: {
+      '#' => { attr: 'id' },
+      '.' => { attr: 'class' },
+      '@' => { attr: 'role' }
+    })
 
 require 'lib/artisanal_markdown'
 
