@@ -2,9 +2,10 @@ Time.zone = 'US/Pacific'
 
 require 'lib/artisanal_markdown'
 
+require 'slim/include'
 Slim::Engine.set_options(
   tabsize: 2,
-  include_dirs: ['./source/partials'],
+  include_dirs: ["#{Dir.pwd}/source/partials"],
   pretty: true,
   shortcut: {
     '#' => { attr: 'id' },
@@ -21,7 +22,7 @@ activate(:blog) { |blog|
   blog.generate_year_pages = false
   blog.layout = 'article'
   blog.new_article_template = File.expand_path(
-      'templates/article.tt',
+      'source/templates/article.tt',
       File.dirname(__FILE__))
   blog.permalink = 'articles/{title}'
   blog.sources = 'articles/{title}.html'

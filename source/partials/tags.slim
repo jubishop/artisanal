@@ -1,7 +1,9 @@
-- tagname = defined?(tagname) ? tagname
+ruby:
+  tagname = defined?(tagname) ? tagname : ""
+  tag_hash = blog.tags.sort_by { |_, articles| -articles.length }
+  tags = tag_hash.map { |tag, _| tag }
+
 ul.tags
-  <% blog.tags.sort_by { |_, articles| -articles.length }.each { |tag, _| %>
-    <% tag_class = (tag == tagname) ? "current" : "tag" %>
-    <li><%= link_to tag, tag_path(tag), class: tag_class %></li>
-  <% } %>
-</ul>
+  - tags.each do |tag|
+    - tag_class = (tag == tagname) ? "current" : "tag"
+    li: a class=tag_class href=tag_path(tag) =tag
