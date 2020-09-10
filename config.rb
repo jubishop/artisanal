@@ -38,10 +38,11 @@ activate(:syntax) { |syntax|
 }
 
 config[:css_dir] = 'assets/css'
+config[:host] = 'https://artisanalsoftware.com'
 config[:images] = 'assets/img'
 config[:images_dir] = 'assets/img'
 config[:js_dir] = 'assets/js'
-config[:host] = 'https://artisanalsoftware.com'
+config[:layout] = :main
 config[:markdown] = {
   autolink: true,
   fenced_code_blocks: true,
