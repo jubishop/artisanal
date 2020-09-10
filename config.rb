@@ -4,14 +4,14 @@ require 'lib/artisanal_markdown'
 
 require 'slim/include'
 Slim::Engine.set_options(
-  tabsize: 2,
-  include_dirs: ["#{Dir.pwd}/source/partials"],
-  pretty: true,
-  shortcut: {
-    '#' => { attr: 'id' },
-    '.' => { attr: 'class' },
-    '@' => { attr: 'role' }
-  })
+    tabsize: 2,
+    include_dirs: ["#{Dir.pwd}/source/partials"],
+    pretty: true,
+    shortcut: {
+      '#' => { attr: 'id' },
+      '.' => { attr: 'class' },
+      '@' => { attr: 'role' }
+    })
 
 page '/*.xml', layout: false
 
