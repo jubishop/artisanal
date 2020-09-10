@@ -1,24 +1,10 @@
-.content {
-  padding-top: 1rem;
-}
-.content p:first-child:first-letter {
-  font-family: var(--cursive-font), cursive;
-  font-size: 3em;
-  text-transform: capitalize;
-}
-.content > :first-child {
-  margin-top: 2rem;
-}
+/* ROUGE THEMES */
+@import url('/assets/css/light_syntax.css');
+@import url('/assets/css/dark_syntax.css') (prefers-color-scheme: dark);
 
-h2 {
-  margin-bottom: 0;
-  margin-top: 2em;
-}
-p {
-  text-indent: 1em;
-}
-
-.comment {
+/* MAIN CONTENT */
+@import url('/assets/css/content.css');
+p:last-child {
   border-top: 1px solid var(--border-color);
   color: var(--dim-text-color);
   font-size: 0.9em;
@@ -26,10 +12,10 @@ p {
   line-height: 1.25em;
   margin-top: 2em;
   padding-top: 0.5em;
+  text-indent: 0;
 }
 
 /* SYNTAX HIGHLIGHTING */
-<%= Rouge::Themes::Github.render(:scope => '.highlight') %>
 .codespan {
   background-color: #f8f8f8;
   font-weight: bold;
@@ -37,7 +23,6 @@ p {
   color: #990000;
 }
 @media (prefers-color-scheme: dark) {
-  <%= Rouge::Themes::MonokaiSublime.render(:scope => '.highlight') %>
   .codespan {
     background-color: #272822;
     color: #a6e22e;

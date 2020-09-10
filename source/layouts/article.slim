@@ -1,0 +1,12 @@
+- current_page.data.title = current_article.title
+
+- content_for :head
+    ==google_fonts "Fira Code"
+    ==stylesheet_link_tag :article
+    ==javascript_include_tag :article
+
+==wrap_layout :main
+  ==yield
+
+  markdown:
+    What do you think? I'd love to hear from you. [Here is a link](https://github.com/jubishop/artisanal/blob/master/source#{current_page.url}.html.md.erb) to the source for this article on github.  Please [open an issue](https://github.com/jubishop/artisanal/issues), send me a [pull-request](https://github.com/jubishop/artisanal/pulls), or just email me at jubi@jubishop.com

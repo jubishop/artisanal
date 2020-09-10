@@ -1,0 +1,48 @@
+doctype html
+html
+  head
+    meta http-equiv="Content-Type" content="text/html; charset=utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=0.4"
+
+    title =current_page.data.title
+
+    ==font_awesome :bcb8451e88
+    ==iconify
+    ==google_fonts "Patrick Hand", "Fira Sans"
+
+    ==stylesheet_link_tag :site
+    ==javascript_include_tag :site
+    ==yield_content :head
+
+  body
+    div.upper-left
+      i#show-sidebar-button.fas.fa-bars
+      a.artisanal-letter.fad.fa-drafting-compass href="/"
+
+    header#headline
+      h1 =current_page.data.title
+
+    div.upper-right
+      a.github.fab.fa-github href="https://github.com/jubishop/artisanal"
+
+    div.sidebar
+      nav.sidebar-links
+        a.profile-pic-link href="https://jubishop.com"
+          img.profile-pic [
+            src="https://graph.facebook.com/688626964/picture?type=large",
+            alt="My profile pic"
+          ]
+        a.about-link href="/about" About
+        div.left-tags
+          include :tags
+        i#hide-sidebar-button.fas.fa-arrow-square-left
+
+      div.sidebar-header
+        a href="/" RTISANAL
+
+    div#main@main
+      div.content
+        ==yield
+
+    div.rightbar
+      include :tags

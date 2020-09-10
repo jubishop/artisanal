@@ -36,3 +36,15 @@ a.read-more:hover {
   background-color: var(--bg-color);
   color: var(--link-color);
 }
+
+.pagination {
+  display: flex;
+  font-size: calc(var(--font-multiplier) * 2rem);
+  justify-content: center;
+  margin-top: 1em;
+}
+.pagination a:not(:first-child) {
+  border-left: solid 2px var(--text-color);
+  margin-left: 1em;
+  padding-left: 1em;
+}
