@@ -6,7 +6,7 @@ module HeadHelpers
 
   def google_fonts(*fonts)
     fonts = fonts.map { |font| "family=#{font}" }.join('&')
-    stylesheet_link_tag "https://fonts.googleapis.com/css2?#{fonts}&" \
-        'display=swap'
+    stylesheet_link_tag("https://fonts.googleapis.com/css2?#{fonts}&" \
+                        'display=swap')
   end
 end

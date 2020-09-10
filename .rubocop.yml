@@ -4,3 +4,7 @@ Style/MethodCallWithArgsParentheses:
   Exclude:
     - config.rb
     - "source/*.builder"
+
+Style/StringHashKeys:
+  Exclude:
+    - config.rb
