@@ -16,7 +16,7 @@ Slim::Engine.set_options(
 page '/*.xml', layout: false
 
 activate(:blog) { |blog|
-  blog.default_extension = '.md.erb'
+  blog.default_extension = '.md'
   blog.generate_day_pages = false
   blog.generate_month_pages = false
   blog.generate_year_pages = false
