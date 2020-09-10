@@ -1,0 +1,65 @@
+doctype html
+html
+  head
+  meta http-equiv="Content-Type" content="text/html; charset=utf-8"
+  meta name="viewport" content="width=device-width, initial-scale=0.4"
+
+  title = current_page.data.title
+  javascript src="https://kit.fontawesome.com/bcb8451e88.js" \
+             crossorigin="anonymous"
+
+/   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Fira+Sans&display=swap"
+/         rel="stylesheet">
+
+/   <%= stylesheet_link_tag "site" %>
+/   <%= javascript_include_tag "site" %>
+/   <%= yield_content :assets %>
+/ </head>
+
+/ <body>
+/   <div class="upper-left">
+/     <i id="show-sidebar-button" class="fas fa-bars"></i>
+/     <%= link_to "", "/", class: "artisanal-letter fad fa-drafting-compass" %>
+/   </div>
+
+/   <header id="headline">
+/     <h1><%= current_page.data.title %></h1>
+/   </header>
+
+/   <div class="upper-right">
+/     <%= link_to "", "https://github.com/jubishop/artisanal",
+/                     class: "fab fa-github github" %>
+/   </div>
+
+/   <div class="sidebar">
+/     <nav class="sidebar-links">
+/       <% link_to("https://jubishop.com", class: "profile-pic-link") { %>
+/         <%= image_tag "https://graph.facebook.com/688626964/picture?type=large",
+/                       class: "profile-pic",
+/                       alt: "My profile pic" %>
+/       <% } %>
+/       <%= link_to "About", "/about", class: "about-link" %>
+
+/       <div class="left-tags">
+/         <%= partial :tags %>
+/       </div>
+
+/       <i id="hide-sidebar-button" class="fas fa-arrow-square-left"></i>
+/     </nav>
+/     <div class="sidebar-header">
+/       <%= link_to "RTISANAL", "/"%>
+/     </div>
+/   </div>
+
+/   <div id="main" role="main">
+/     <div class="content">
+/       <%= yield %>
+/     </div>
+/   </div>
+
+/   <div class="rightbar">
+/     <%= partial :tags %>
+/   </div>
+/ </body>
+
+/ </html>

@@ -1,3 +1,5 @@
+require 'slim'
+
 require 'lib/artisanal_markdown'
 
 Time.zone = 'US/Pacific'
