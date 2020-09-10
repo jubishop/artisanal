@@ -1,18 +1,16 @@
 Time.zone = 'US/Pacific'
 
-require 'slim'
-require 'slim/include'
-Slim::Engine.set_options(
-    tabsize: 2,
-    include_dirs: ['./source/partials'],
-    pretty: true,
-    shortcut: {
-      '#' => { attr: 'id' },
-      '.' => { attr: 'class' },
-      '@' => { attr: 'role' }
-    })
-
 require 'lib/artisanal_markdown'
+
+Slim::Engine.set_options(
+  tabsize: 2,
+  include_dirs: ['./source/partials'],
+  pretty: true,
+  shortcut: {
+    '#' => { attr: 'id' },
+    '.' => { attr: 'class' },
+    '@' => { attr: 'role' }
+  })
 
 page '/*.xml', layout: false
 
@@ -57,6 +55,7 @@ config[:markdown] = {
   superscript: true,
   underline: true
 }
+Slim::Embedded.options[:markdown] = config[:markdown]
 config[:markdown_engine] = :redcarpet
 config[:port] = 80
 config[:trailing_slash] = false
