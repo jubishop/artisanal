@@ -1,13 +1,19 @@
+Time.zone = 'US/Pacific'
+
 require 'slim'
 require 'slim/include'
 Slim::Engine.set_options(
   tabsize: 2,
-  include_dirs: ["#{Dir.pwd}/source/partials"]
+  include_dirs: ["./source/partials"],
+  pretty: true,
+  shortcut: {
+    '#' => {attr: 'id'},
+    '.' => {attr: 'class'},
+    '@' => {attr: 'role'}
+  }
 )
 
 require 'lib/artisanal_markdown'
-
-Time.zone = 'US/Pacific'
 
 page '/*.xml', layout: false
 

@@ -4,49 +4,46 @@ html
     meta http-equiv="Content-Type" content="text/html; charset=utf-8"
     meta name="viewport" content="width=device-width, initial-scale=0.4"
 
-    title = current_page.data.title
-    script [src="https://kit.fontawesome.com/bcb8451e88.js"
-            crossorigin="anonymous"]
+    title =current_page.data.title
+
+    =fontawesome "bcb8451e88"
 
     link [href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Fira+Sans&display=swap"
           rel="stylesheet"]
 
-    == stylesheet_link_tag :site
-    == javascript_include_tag :site
-    == yield_content :assets
+    ==stylesheet_link_tag :site
+    ==javascript_include_tag :site
+    ==yield_content :assets
 
   body
-    div class="upper-left"
-      i id="show-sidebar-button" class=["fas", "fa-bars"]
-      == link_to "", "/", class: "artisanal-letter fad fa-drafting-compass"
-
+    div.upper-left
+      i#show-sidebar-button.fas.fa-bars
+      a.artisanal-letter.fad.fa-drafting-compass href="/"
 
     header#headline
-      h1 = current_page.data.title
+      h1 =current_page.data.title
 
-    div class="upper-right"
-      == link_to "", "https://github.com/jubishop/artisanal",
-                    class: "fab fa-github github"
+    div.upper-right
+      a.github.fab.fa-github href="https://github.com/jubishop/artisanal"
 
+    div.sidebar
+      nav.sidebar-links
+        a.profile-pic-link href="https://jubishop.com"
+          img.profile-pic [
+            src="https://graph.facebook.com/688626964/picture?type=large",
+            alt="My profile pic"
+          ]
+        a.about-link href="/about" About
+        div.left-tags
+          ==partial :tags
+        i#hide-sidebar-button.fas.fa-arrow-square-left
 
-    .sidebar
-      nav class="sidebar-links"
-        == link_to("https://jubishop.com", class: "profile-pic-link") { \
-            image_tag "https://graph.facebook.com/688626964/picture?type=large",
-                      class: "profile-pic",
-                      alt: "My profile pic" }
-        == link_to "About", "/about", class: "about-link"
+      div.sidebar-header
+        a href="/" RTISANAL
 
-        div class="left-tags"
-          == partial :tags
-        i id="hide-sidebar-button" class=["fas", "fa-arrow-square-left"]
-
-      div class="sidebar-header"
-        == link_to "RTISANAL", "/"
-
-    div id="main" role="main"
+    div#main@main
       div.content
-        == yield
+        ==yield
 
     div.rightbar
-      == partial :tags
+      ==partial :tags
