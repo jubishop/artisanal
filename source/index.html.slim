@@ -3,7 +3,7 @@ pageable: true
 per_page: 5
 title: Artisanal Software
 ---
-- content_for(:assets)
+- content_for :head
   ==feed_tag :atom, "/feed.xml", title: "Artisanal Software"
 
 ==partial :articles
