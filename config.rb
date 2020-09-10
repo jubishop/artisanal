@@ -1,4 +1,9 @@
 require 'slim'
+require 'slim/include'
+Slim::Engine.set_options(
+  tabsize: 2,
+  include_dirs: ["#{Dir.pwd}/source/partials"]
+)
 
 require 'lib/artisanal_markdown'
 
