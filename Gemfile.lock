@@ -118,6 +118,7 @@ DEPENDENCIES
   middleman-syntax
   nokogiri
   redcarpet
+  rouge
   slim
 
 BUNDLED WITH

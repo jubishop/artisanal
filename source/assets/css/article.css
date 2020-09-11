@@ -15,33 +15,25 @@ p:last-child {
   text-indent: 0;
 }
 
-/* SYNTAX HIGHLIGHTING */
-.codespan {
-  background-color: #f8f8f8;
-  font-weight: bold;
-  padding: 0 0.2em;
-  color: #990000;
-}
-@media (prefers-color-scheme: dark) {
-  .codespan {
-    background-color: #272822;
-    color: #a6e22e;
-  }
-}
+/* CODE FORMATTING */
 code {
   font-family: 'Fira Code', monospace;
 }
 
-/* CODE BLOCKS */
-.highlight {
+span.highlight {
+  font-weight: bold;
+  padding: 0 0.2em;
+}
+
+div.highlight {
   margin: 0;
   padding: 0.4em 0.6em;
   position: relative;
 }
-.highlight pre {
+div.highlight pre {
   margin: 0;
 }
-.highlight pre::before {
+div.highlight pre::before {
   color: var(--dim-text-color);
   content: attr(class);
   font-family: var(--cursive-font), cursive;
@@ -51,6 +43,7 @@ code {
   text-transform: capitalize;
   top: -0.2em;
 }
+
 .clipboard {
   bottom: 0.2em;
   color: var(--dim-text-color);
