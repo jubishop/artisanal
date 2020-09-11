@@ -69,7 +69,7 @@ This could now be expressed in Erb instead as:
 </nav>
 ```
 
-This is not, on the face of it, much prettier.  In order to really make headway, we'd want to pull in [Padrino](http://padrinorb.com) to support helpers like `link_to`.
+This is not, on the face of it, much prettier.  In order to really make headway, we'd want to pull in [Padrino](http://padrinorb.com) to enable helpers like `link_to`.
 
 This is, in general, a bad idea, because **the function `render_liquid` is not part of any interface contract between Jekyll and its users**.  The function could be changed out from under us at any time, breaking our modification.  A hack like this might be justified if you're already deeply entrenched into Jekyll with a well established project that needs Erb support.
 
