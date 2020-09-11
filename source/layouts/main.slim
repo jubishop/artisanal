@@ -11,6 +11,8 @@ html
     ==google_fonts "Patrick Hand", "Fira Sans"
 
     ==stylesheet_link_tag :site
+    - if current_page.data.stylesheet
+      ==stylesheet_link_tag current_page.data.stylesheet
     ==javascript_include_tag :site
     ==yield_content :head
 

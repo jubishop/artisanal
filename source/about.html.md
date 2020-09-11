@@ -1,3 +1,8 @@
+---
+title: About Artisanal
+stylesheet: content
+---
+
 ## Me
 
 Hello there!  My name is Justin Bishop, but most people nowadays just call me "Jubi".  I live in Seattle with my beautiful wife, two adorable children, and a sweet pup named Belle.  I work as a Software Engineer at Google.  You can learn a ton more about me on my personal homepage at https://jubishop.com.
