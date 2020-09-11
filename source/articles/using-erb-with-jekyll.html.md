@@ -60,12 +60,12 @@ This could now be expressed in Erb instead as:
 
 ```erb
 <nav>
-  <%% site.data.navigation.each { |item| %>
-    <a href="<%%= item.link %>"
-       <%% if page.url == item.link %>style="color: red;"<%% end %>>
-      <%% item.name %>
+  <% site.data.navigation.each { |item| %>
+    <a href="<%= item.link %>"
+       <% if page.url == item.link %>style="color: red;"<% end %>>
+      <% item.name %>
     </a>
-  <%% } %>
+  <% } %>
 </nav>
 ```
 
