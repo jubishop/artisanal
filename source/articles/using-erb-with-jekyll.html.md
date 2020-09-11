@@ -10,7 +10,7 @@ But from everything I could find: Erb was not an option.  The primary explanatio
 
 Welp, one of the great and terrifying things about Ruby is that anything can be modified.   No library code is safe from an unscrupulous developer willing to do unholy things.  I decided the method `Jekyll::Renderer::render_liquid`, found [here](https://github.com/jekyll/jekyll/blob/master/lib/jekyll/renderer.rb), was the optimal place to cut in some Erb action.  The function is universally called anytime Jekyll wants to parse a string with Liquid.  What's better: it's passed all the juicy [local variables](https://jekyllrb.com/docs/variables/) intended for use inside Liquid tags.  We could hijack this function and process the string with Erb, passing along the same local variables.
 
-## Thusly, the plan was hatched.
+## Thusly, the plan was hatched
 
 There are several approaches to monkey-patching an existing function.  I believe the cleanest is to create a new Module, then open the existing class and insert it via the `prepend` operator.  Since this is a shameful thing to do, I didn't think this deserved to be made into its own gem, so I simply added a file to the sh|`./plugins`| directory inside my project.  I threw in the [recursive-open-struct](https://github.com/aetherknight/recursive-open-struct) gem to make things slicker.  I didn't want to lose access to any other plugin or gem available for Jekyll that might use Liquid, so rather than stop Liquid processing entirely, I decided I'd do both: first Liquid, then Erb.  This would be the equivalent of a file in [Middleman](https://middlemanapp.com) with the extension sh|`.liquid.erb`|.  Behold, the hack in its entirety:
 
