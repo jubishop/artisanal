@@ -4,6 +4,7 @@ per_page: 5
 title: Artisanal Software
 ---
 - content_for :head
-  ==feed_tag :atom, "/feed.xml", title: "Artisanal Software"
+  ==feed_tag :atom, "/atom.xml", title: "Artisanal Software"
+  ==feed_tag :rss, "/rss.xml", title: "Artisanal Software"
 
 include :articles
