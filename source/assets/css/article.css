@@ -23,6 +23,12 @@ code {
 span.highlight {
   font-weight: bold;
   padding: 0 0.2em;
+  color: #239023; /* lime green 35% */
+}
+@media (prefers-color-scheme: dark) {
+  span.highlight {
+    color: #6fdc6f; /* lime green 65% */
+  }
 }
 
 div.highlight {
