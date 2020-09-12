@@ -8,7 +8,8 @@ Slim::Engine.set_options(
     shortcut: {
       '#' => { attr: 'id' },
       '.' => { attr: 'class' },
-      '@' => { attr: 'role' }
+      '&' => { attr: 'role' },
+      '@' => { attr: 'href' }
     })
 
 page '/*.xml', layout: false

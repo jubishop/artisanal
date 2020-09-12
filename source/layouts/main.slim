@@ -34,7 +34,7 @@ html
             src="https://graph.facebook.com/688626964/picture?type=large",
             alt="My profile pic"
           ]
-        a.about-link href="/about" About
+        a.about-link@about About
         div.left-tags
           include :tags
         i#hide-sidebar-button.fas.fa-arrow-square-left
@@ -42,7 +42,7 @@ html
       div.sidebar-header
         a href="/" RTISANAL
 
-    div#main@main
+    div#main&main
       div.content
         ==yield
 
