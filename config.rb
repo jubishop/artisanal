@@ -19,9 +19,6 @@ activate(:blog) { |blog|
   blog.generate_month_pages = false
   blog.generate_year_pages = false
   blog.layout = 'article'
-  blog.new_article_template = File.expand_path(
-      'source/templates/article.tt',
-      File.dirname(__FILE__))
   blog.permalink = 'articles/{title}'
   blog.sources = 'articles/{title}.html'
   blog.summary_separator = /\n+/
