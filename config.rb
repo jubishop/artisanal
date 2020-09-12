@@ -1,7 +1,5 @@
 Time.zone = 'US/Pacific'
 
-require 'lib/artisanal_markdown'
-
 require 'slim/include'
 Slim::Engine.set_options(
     tabsize: 2,
@@ -38,6 +36,7 @@ activate(:syntax) { |syntax|
   syntax.css_class = ''
 }
 
+require 'lib/artisanal_markdown'
 config[:css_dir] = 'assets/css'
 config[:host] = 'https://artisanalsoftware.com'
 config[:images] = 'assets/img'

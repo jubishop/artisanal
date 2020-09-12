@@ -4,9 +4,7 @@ xml.feed(xmlns: 'http://www.w3.org/2005/Atom') {
   xml.id URI.join(config[:host], blog.options.prefix.to_s)
   xml.link href: URI.join(config[:host], blog.options.prefix.to_s)
   xml.link href: URI.join(config[:host], current_page.path), rel: 'self'
-  unless blog.articles.empty?
-    xml.updated(blog.articles.first.date.iso8601)
-  end
+  xml.updated(blog.articles.first.date.iso8601) unless blog.articles.empty?
   xml.author {
     xml.name 'Justin Bishop'
     xml.email 'jubi@jubishop.com'

@@ -1,5 +1,7 @@
+require 'English'
 require 'middleman-core/renderers/redcarpet'
-require 'rouge'
+
+require_relative 'artisanal_slim'
 
 class ArtisanalMarkdown < Middleman::Renderers::MiddlemanRedcarpetHTML
   def preprocess(full_document)
@@ -8,9 +10,8 @@ class ArtisanalMarkdown < Middleman::Renderers::MiddlemanRedcarpetHTML
                         '<iconify-icon data-icon="\1"></iconify-icon>')
 
     # Fancy inline code
-    formatter = Rouge::Formatters::HTML.new
     full_document.gsub!(/(?<language>[a-z]+)\|`(?<code>.+?)`\|/) {
-      inline_code($~[:code], $~[:language])
+      inline_code($LAST_MATCH_INFO[:code], $LAST_MATCH_INFO[:language])
     }
 
     return full_document
@@ -31,7 +32,10 @@ class ArtisanalMarkdown < Middleman::Renderers::MiddlemanRedcarpetHTML
   def inline_code(code, language)
     formatter = Rouge::Formatters::HTML.new
     lexer = Rouge::Lexer.find_fancy(language, code)
-    formatted = formatter.format(lexer.lex(code))
-    return "<span class=\"highlight\"><code>#{formatted}</code></span>"
+    return Slim.render(<<~SLIM, binding)
+      span.highlight
+        code
+          ==formatter.format(lexer.lex(code))
+    SLIM
   end
 end
