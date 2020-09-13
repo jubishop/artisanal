@@ -35,12 +35,6 @@ activate(:syntax) { |syntax|
 }
 
 require 'lib/artisanal_markdown'
-config[:css_dir] = 'assets/css'
-config[:host] = 'https://artisanalsoftware.com'
-config[:images] = 'assets/img'
-config[:images_dir] = 'assets/img'
-config[:js_dir] = 'assets/js'
-config[:layout] = :main
 config[:markdown] = {
   autolink: true,
   fenced_code_blocks: true,
@@ -56,5 +50,12 @@ config[:markdown] = {
 }
 Slim::Embedded.options[:markdown] = config[:markdown]
 config[:markdown_engine] = :redcarpet
+
+config[:css_dir] = 'assets/css'
+config[:host] = 'https://artisanalsoftware.com'
+config[:images] = 'assets/img'
+config[:images_dir] = 'assets/img'
+config[:js_dir] = 'assets/js'
+config[:layout] = :main
 config[:port] = 80
 config[:trailing_slash] = false
