@@ -13,7 +13,7 @@ Let's talk about how to set up [middleman-syntax](https://github.com/middleman/m
 
 ## Markdown
 
-I like to write my articles in straight [Markdown](https://daringfireball.net/projects/markdown/).  It's clean that way.  So this tutorial is specifically about enabling "fenced code blocks", which you can see in action, for example, in the markup for this [specific article on github](https://github.com/jubishop/artisanal/blob/master/source/articles/pimping-out-middleman-syntax.html.md).
+I like to write my articles in straight [Markdown](https://daringfireball.net/projects/markdown/).  It's clean that way.  So this tutorial is specifically about enabling [fenced code blocks](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks), which you can see in action, for example, in the markup for this [specific article on github](https://github.com/jubishop/artisanal/blob/master/source/articles/pimping-out-middleman-syntax.html.md).
 
 ## Redcarpet
 
