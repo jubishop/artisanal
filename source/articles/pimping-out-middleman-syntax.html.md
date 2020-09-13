@@ -85,7 +85,7 @@ div.highlight pre {
 }
 ```
 
-## Displaying the language in upper right
+## Displaying the language
 
 One thing I always like about [CSS-TRICKS](https://css-tricks.com) is how they display the language of any code block in the upper right corner.  I wanted to add the same, but as seamlessly and effortlessly as possible.  When creating a code block you're supposed to put the language right after the triple backticks, so the Lexer can parse it accurately.  My goal was to reuse that language identifier directly and just put it in the upper right corner.  In sh|`config.rb`| I remove any additional classes that might otherwise be applied to the wrapping html|`<pre>`| tag by saying `syntax.css_class = ''`.  We don't actually need any extra classes there, because the whole thing is also wrapped in a html|`<div class="highlight">`|, which is all our CSS selectors need.  This means our html|`<pre>`| tags will only have the class of our language, i.e. html|`<pre class="ruby">`|.  Boom.  Now we can reuse that html|`"class"`| attribute for the content of a pseudo-element in CSS.  We also want to position it tightly into the upper right corner.  The magic sauce becomes:
 
@@ -152,6 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 And there you have it!  You needn't look further than all the code blocks on this page to see the end result.
 
-## CSS Variables
+## CSS variables
 
 As a final note: several of the CSS examples I have shown are using [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties), such as css|`var(--dim-text-color)`|.  I leave it as an exercise to the reader to define these in their own CSS files however they like.
