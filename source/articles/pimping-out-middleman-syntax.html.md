@@ -77,7 +77,7 @@ I also wanted to modify the padding around each block a bit and position it with
 ```css
 div.highlight {
   margin: 0;
-  padding: 0.4em 0.6em;
+  padding: 0.6em;
   position: relative;
 }
 div.highlight pre {
