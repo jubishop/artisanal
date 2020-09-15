@@ -1,6 +1,6 @@
 {
   "clean_urls": true,
-  "error_page": "404.html",
+  "error_page": "index.html",
   "https_only": true,
   "root": "."
 }
