@@ -31,10 +31,9 @@ html
     div.sidebar
       nav.sidebar-links
         a.profile-pic-link href="https://jubishop.com"
-          img.profile-pic [
-            src="https://graph.facebook.com/688626964/picture?type=large"
-            alt="My profile pic"
-          ]
+          ==image_tag "profile_pic.jpg",
+                      alt: "My profile pic",
+                      class: "profile-pic"
         a.about-link@about About
         div.left-tags
           include :tags
