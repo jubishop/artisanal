@@ -1,5 +1,5 @@
 #!/bin/zsh
 
-rm -rf ./build/*
+rm -rf build/*
 bundle exec middleman build
-(cd ./build; git add --all; git commit -a -m "updating build"; git push)
+(cd build; git add --all; git commit -a -m "updating build"; git push)

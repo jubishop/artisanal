@@ -9,6 +9,9 @@ class ArtisanalMarkdown < Middleman::Renderers::MiddlemanRedcarpetHTML
     full_document.gsub!(/!iconify\[(.+?)\]/,
                         '<iconify-icon data-icon="\1"></iconify-icon>')
 
+    # Font-Awesome
+    full_document.gsub!(/!fa([b|d|l|s])\[(.+?)\]/, '<i class="fa\1 fa-\2"></i>')
+
     # Fancy inline code
     full_document.gsub!(/(?<language>[a-z]+)\|`(?<code>.+?)`\|/) {
       inline_code($LAST_MATCH_INFO[:code], $LAST_MATCH_INFO[:language])
