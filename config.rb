@@ -14,6 +14,8 @@ Slim::Engine.set_options(
 
 page '/*.xml', layout: false
 
+activate :asset_hash
+
 activate(:blog) { |blog|
   blog.default_extension = '.md'
   blog.generate_day_pages = false
