@@ -131,6 +131,10 @@ a.github {
 .sidebar-links {
   display: var(--sidebar-showing);
 }
+.profile-pic-link {
+  display: block;
+  text-align: center;
+}
 .profile-pic {
   width: 10em;
 }

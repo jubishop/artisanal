@@ -58,6 +58,6 @@ config[:host] = 'https://artisanalsoftware.com'
 config[:images] = 'assets/img'
 config[:images_dir] = 'assets/img'
 config[:js_dir] = 'assets/js'
-config[:layout] = :main
+config[:layout] = :site
 config[:port] = 80
 config[:trailing_slash] = false
