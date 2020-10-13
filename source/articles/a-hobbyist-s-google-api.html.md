@@ -8,7 +8,7 @@ Google's API is designed with "serious" apps in mind.  That's fine, but it can b
 
 ## Make An App
 
-First things first:  you need to make an app.  Head on over to the [create a project](https://console.developers.google.com/projectcreate) page and make an app.  It doesn't matter what you name it or what organization it's under.  I just went with `No Organization`.
+First things first:  you need to make an app.  Head on over to the [create a project](https://console.developers.google.com/projectcreate) page.  It doesn't matter what you name it or what organization it's under.  I just went with `No Organization`.
 
 Once the app is created you'll land back at the dashboard.  Click on the [OAuth Consent Screen](https://console.developers.google.com/apis/credentials/consent) link in the left navigation.  Choose `External`  for the user type (it might be your only option anyway), then click `Create`.  Now there's a bunch of crap on the next form that doesn't matter.  Give it a name to make it happy, then click `Save` at the bottom.
 
