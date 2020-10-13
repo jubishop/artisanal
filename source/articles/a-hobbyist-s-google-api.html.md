@@ -71,7 +71,7 @@ That `$ACCESS_TOKEN` is what will let you make successful API requests.  The exa
 }
 ```
 
-## You got one hour!
+## Refresh Token
 
 As you can see from that sad `expires_in` attribute, your `access_token` is only going to last you an hour.  But that's ok, the `refresh_token` is our saviour.  Once you need a new `access_token`, you can make another `POST` request using the `refresh_token`.  In my [Scriptable](https://scriptable.app) script, which is mostly javascript, it looks like this:
 
