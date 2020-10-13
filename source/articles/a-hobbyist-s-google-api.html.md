@@ -32,7 +32,7 @@ https://accounts.google.com/o/oauth2/v2/auth?client_id=$CLIENT_ID&redirect_uri=h
 
 ## This app isn't verified!
 
-Once you choose an account (and enter your password if necessary), you'll see a scary `This app is not verified!` screen.  Woopeedoo.  Click the `Advanced` link or whatever it's called (it's different in each browser), and then click the scary link to go to the unsafe page or whatever it says.  Click through a few more `Allow` style Google forms and you'll ultimately land at a `localhost` address, which will fail to load anything.  This is fine.  Look in the URL.  It'll look like this:
+Once you choose an account (and enter your password if necessary), you'll see a scary `This app is not verified!` screen.  Woopeedoo.  Click the `Advanced` link or whatever it's called (it's different in each browser), and click the scary link to go to the unsafe page.  Click through a few more `Allow` style Google forms and you'll ultimately land at a `localhost` address, which will fail to load anything.  This is fine.  Look in the URL.  It'll look like this:
 
 ```shell
 https://localhost/?code=$CODE&scope=$SCOPE
