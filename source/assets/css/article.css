@@ -22,10 +22,12 @@ code {
 
 code {
   background-color: #f8f8f8;
+  color: black;
 }
 @media (prefers-color-scheme: dark) {
   code {
     background-color: #272822;
+    color: white;
   }
 }
 
