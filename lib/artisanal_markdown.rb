@@ -26,10 +26,6 @@ class ArtisanalMarkdown < Middleman::Renderers::MiddlemanRedcarpetHTML
     return result
   end
 
-  def codespan(code)
-    return inline_code(code, 'ruby')
-  end
-
   private
 
   def inline_code(code, language)
