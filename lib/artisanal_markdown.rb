@@ -31,10 +31,14 @@ class ArtisanalMarkdown < Middleman::Renderers::MiddlemanRedcarpetHTML
   def inline_code(code, language)
     formatter = Rouge::Formatters::HTML.new
     lexer = Rouge::Lexer.find_fancy(language, code)
+    formatted = formatter.format(lexer.lex(code))
+
+    formatted.gsub!('_', '\_') # Escape markdown crap
+
     return Slim.render(<<~SLIM, binding)
       span.highlight
         code
-          ==formatter.format(lexer.lex(code))
+          ==formatted
     SLIM
   end
 end

@@ -4,16 +4,6 @@
 
 /* MAIN CONTENT */
 @import url('/assets/css/content.css');
-p:last-child {
-  border-top: 1px solid var(--border-color);
-  color: var(--dim-text-color);
-  font-size: 0.9em;
-  font-style: italic;
-  line-height: 1.25em;
-  margin-top: 2em;
-  padding-top: 0.5em;
-  text-indent: 0;
-}
 
 /* CODE FORMATTING */
 code {
