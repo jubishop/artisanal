@@ -6,10 +6,12 @@ Slim::Engine.set_options(
     include_dirs: ["#{Dir.pwd}/source/partials"],
     pretty: true,
     shortcut: {
+      # rubocop:disable Style/StringHashKeys
       '#' => { attr: 'id' },
       '.' => { attr: 'class' },
       '&' => { attr: 'role' },
       '@' => { attr: 'href' }
+      # rubocop:enable all
     })
 
 page '/*.xml', layout: false

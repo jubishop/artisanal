@@ -1,10 +1,2 @@
-inherit_from: ~/.rubocop.yml
-
-Style/MethodCallWithArgsParentheses:
-  Exclude:
-    - config.rb
-    - "source/*.builder"
-
-Style/StringHashKeys:
-  Exclude:
-    - config.rb
+inherit_from:
+  - https://raw.githubusercontent.com/jubishop/core/master/.rubocop.yml

@@ -10,7 +10,7 @@ class ArtisanalMarkdown < Middleman::Renderers::MiddlemanRedcarpetHTML
                         '<iconify-icon data-icon="\1"></iconify-icon>')
 
     # Font-Awesome
-    full_document.gsub!(/!fa([b|d|l|s])\[(.+?)\]/, '<i class="fa\1 fa-\2"></i>')
+    full_document.gsub!(/!fa([b|dls])\[(.+?)\]/, '<i class="fa\1 fa-\2"></i>')
 
     # Fancy inline code
     full_document.gsub!(/(?<language>[a-z]+)\|`(?<code>.+?)`\|/) {
