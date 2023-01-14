@@ -21,6 +21,8 @@ class ArtisanalMarkdown < Middleman::Renderers::MiddlemanRedcarpetHTML
   end
 
   def block_code(code, language)
+    return "<pre class=\"mermaid\">#{code}</pre>" if language == 'mermaid'
+
     result = super(code, language)
     result.sub!(%r{</div>\s*$}, '<i class="fas fa-copy clipboard"></i></div>')
     return result
