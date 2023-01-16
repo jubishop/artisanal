@@ -1,6 +1,6 @@
 module Slim
   def self.render(source, binding)
-    template = Slim::Template.new(nil, nil, {}) { source }
+    template = Slim::Template.new { source }
     return template.render(BindingWrapper.new(binding))
   end
 
