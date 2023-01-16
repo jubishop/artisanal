@@ -7,7 +7,7 @@ class ArtisanalMarkdown < Middleman::Renderers::MiddlemanRedcarpetHTML
   def preprocess(full_document)
     # Iconify
     full_document.gsub!(/!iconify\[(.+?)\]/,
-                        '<iconify-icon data-icon="\1"></iconify-icon>')
+                        '<iconify-icon icon="\1"></iconify-icon>')
 
     # Font-Awesome
     full_document.gsub!(/!fa([b|dls])\[(.+?)\]/, '<i class="fa\1 fa-\2"></i>')
