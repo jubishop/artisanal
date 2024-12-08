@@ -1,5 +1,7 @@
 Time.zone = 'US/Pacific'
 
+require 'action_view'
+
 require 'slim/include'
 Slim::Engine.set_options(
     tabsize: 2,
