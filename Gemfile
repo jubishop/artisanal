@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'middleman'
+gem 'middleman-core', github: 'middleman/middleman', glob: 'middleman-core/*.gemspec', branch: '5.x'
+gem 'middleman-cli', github: 'middleman/middleman', glob: 'middleman-cli/*.gemspec', branch: '5.x'
+gem 'middleman', github: 'middleman/middleman', glob: 'middleman/*.gemspec', branch: '5.x'
 gem 'middleman-blog'
 gem 'middleman-syntax'
 
